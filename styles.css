@@ -70,10 +70,11 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 #bottom-nav {
+    z-index: 2;
     overflow: hidden;
     text-align: center;
     position: fixed;
@@ -99,6 +100,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     font-family: monospace;
+    border-bottom: 2px solid #333;
     /*margin-bottom: 10px;*/
 
 }
@@ -121,7 +123,7 @@ li a:hover {
     text-decoration: none;
     color: white;
     /*border-radius: 10%;*/
-    padding-bottom: 5px;
+    padding: 14px 16px;
     border-bottom: 2px solid #fff922;
 }
 
@@ -178,12 +180,6 @@ h1 {
     text-align: center;
 }
 
-.temp-border {
-    border: white;
-    border-style: solid;
-    border-width: 3px;
-}
-
 .my-pic {
     /*border: 10px dashed blue;*/
     /*margin: 0;*/
@@ -218,10 +214,4 @@ h1 {
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
-}
-
-#myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-    outline: dotted; /* Outline on hover */
-    -moz-outline-radius: 10%;
 }

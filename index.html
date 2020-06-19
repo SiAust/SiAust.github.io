@@ -1,5 +1,63 @@
-"Hello World" 
+<!DOCTYPE html>
+<html xmlns:will-change="http://www.w3.org/1999/xhtml" xmlns:transform="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simon Aust Software Engineer</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
 
-"Site under construction.. bzzz.. hammer noises.."
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css" ;>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-"Making changes with InteliJ WebStorm.."
+<body>
+
+<!-- My profile -->
+<div class="header">
+
+    <img id="profile-pic" class="my-pic"
+         style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+         src="https://avatars2.githubusercontent.com/u/24228747?s=400&u=726c4e238af26cdfa2f766043c1977b37551ff10&v=4">
+
+    <p id="header-text">Software developer based near Bournemouth on the English south coast. Experience in Android
+        development, Java, XML, HTML, CSS, <br>Python. I am currently studying for a bachelors degree in Computing and IT
+        with the Open University.<br><br>
+        In my free time I enjoy days out visiting local landmarks and points of interest as an keen photographer.
+        I like to stay active and enjoy walks, jogging and cycling in the forest.
+        <br><br><br>
+        <- Hey look, it's me!
+    </p>
+
+
+</div>
+
+<ul class="sticky">
+    <li class="nav-list"><a class="active" href="#contact">Contact</a></li>
+    <li class="nav-list"><a href="#projects">Projects</a></li>
+    <li class="nav-list"><a href="#about">About</a></li>
+    <li class="nav-list"><a href="#home">Home</a></li>
+</ul>
+
+<div class="flex-box" style="padding-top: 200px; /*background-color: white*/">
+    <img src="cone.png" style="padding-right: 500px; width: 100px; height: 100px">
+    <img id="digger" src="digger.png">
+    <img src="cone.png" style="z-index: 1">
+</div>
+<div class="flex-box" style="padding-top: 150px; margin: auto; width: 100%; /*background-color: white*/">
+    <img id="roller" src="roller.png" style="margin-left: 600px">
+</div>
+
+<!-- Bottom navigation bar -->
+<div>
+    <ul class="flex-box" id="bottom-nav" style="border-radius: 10px 10px 0 0; bottom: 0">
+        <li class="bottom-nav-list col-xs-3"><a href="https://www.instagram.com/silicone_1882/" target="_blank"><i
+                class="fab fa-instagram"></i></a></li>
+        <li class="bottom-nav-list col-xs-3"><a href="http://www.facebook.com/simon.aust92" target="_blank"><i
+                class="fab fa-facebook"></i></a></li>
+        <li class="bottom-nav-list col-xs-3"><a href="https://github.com/SiAust" target="_blank"><i
+                class="fab fa-github animated-bounce"></i></a></li>
+    </ul>
+
+</div>
+</body>
+</html>

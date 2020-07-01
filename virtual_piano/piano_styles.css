@@ -1,0 +1,47 @@
+@font-face {
+    font-family: myFont;
+    src: url("fonts/Yellowtail-Regular.ttf");
+}
+
+html {
+    height: 100%;
+    margin: auto;
+}
+
+body {
+    background-color: #fc6abd;
+    margin: auto;
+    height: 100%;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+h2 {
+    position: absolute;
+    top: 20%;
+    left: 44%;
+    margin: auto;
+    font-family: myFont, monospace;
+    font-size: 30px;
+}
+
+kbd {
+    display: inline-block;
+    background-color: white;
+    width: 60px;
+    height: 300px;
+    margin-left: -6px;
+    border: black 2px solid;
+    padding: 1px 2px 0;
+    line-height: 300px;
+}
+
+kbd.active {
+    background-image: linear-gradient(white, white, gray);
+}

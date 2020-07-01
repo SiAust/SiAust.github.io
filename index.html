@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:will-change="http://www.w3.org/1999/xhtml" xmlns:transform="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="utf-8">
     <title>Simon Aust Software Engineer</title>
 </head>
 <link rel="stylesheet" href="styles.css">
@@ -17,24 +18,32 @@
 
     <img id="profile-pic" class="my-pic"
          style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-         src="https://avatars2.githubusercontent.com/u/24228747?s=400&u=726c4e238af26cdfa2f766043c1977b37551ff10&v=4">
+         src="resources/profile.jpg">
 
     <p id="header-text">Software developer based near Bournemouth on the English south coast. Experience in Android
-        development, Java, XML, HTML, CSS, <br>Python. I am currently studying for a bachelors degree in Computing and IT
+        development, Java, XML, HTML, CSS, <br>JavaScript and Python. I am currently studying for a bachelors degree in Computing and IT
         with the Open University.<br><br>
         In my free time I enjoy days out visiting local landmarks and points of interest as an keen photographer.
-        I like to stay active and enjoy walks, jogging and cycling in the forest.
-        <br><br><br>
-        <- Hey look, it's me!
+        I like to stay active and enjoy walks, jogging and cycling in the forest.<br><br>
+        <- Hey look, it's me!<br><br>
+        This site is a WIP. Keep calm and carry on coding.
     </p>
-
-
 </div>
+
+<!-- Navigation links -->
 <ul class="sticky">
-    <li class="nav-list"><a class="active" href="#contact">Contact</a></li>
-    <li class="nav-list"><a href="#projects">Projects</a></li>
-    <li class="nav-list"><a href="#about">About</a></li>
-    <li class="nav-list"><a href="#home">Home</a></li>
+    <li><a href="#contact"><del>Contact</del></a></li>
+    <li><a href="#about"><del>About</del></a></li>
+    <li class="dropdown">
+            <a href="javascript:void(0)" class="dropBtn">Projects</a>
+            <div class="dropdown-content">
+                <a href="virtual_piano/virtual_piano.html">Virtual Piano</a>
+                <a href="#"><del>Music Advisor</del></a>
+                <a href="#"><del>Text Editor</del></a>
+                <a href="#"><del>Readability</del></a>
+            </div>
+    </li>
+    <li><a class="active" href="#home">Home</a></li>
 </ul>
 
 <div class="flex-box" style="padding-top: 200px; /*background-color: white*/">
@@ -51,12 +60,12 @@
     <ul class="flex-box" id="bottom-nav" style="border-radius: 10px 10px 0 0; bottom: 0">
         <li class="bottom-nav-list col-xs-3"><a href="https://www.instagram.com/silicone_1882/" target="_blank"><i
                 class="fab fa-instagram"></i></a></li>
-        <li class="bottom-nav-list col-xs-3"><a href="http://www.facebook.com/simon.aust92" target="_blank"><i
-                class="fab fa-facebook"></i></a></li>
+        <li class="bottom-nav-list col-xs-3"><a href="https://www.linkedin.com/in/simon-aust-73ab40165" target="_blank"><i
+                class="fab fa-linkedin"></i></a></li>
         <li class="bottom-nav-list col-xs-3"><a href="https://github.com/SiAust" target="_blank"><i
                 class="fab fa-github"></i></a></li>
     </ul>
-
+    <a href="https://www.vecteezy.com/free-vector/building-site">Building Site Vectors by Vecteezy</a>
 </div>
 </body>
 </html>

@@ -38,6 +38,223 @@ slider.oninput = function() {
     console.log("slider value= " + this.value / 100);
 }
 
+/* Click listeners */
+keyA.addEventListener("mousedown", function () {
+    if (!firedA) {
+        firedA = true;
+        keyA.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/A.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'A' has been clicked.");
+    }
+})
+
+keyA.addEventListener("mouseup", function () {
+    firedA = false;
+    keyA.removeAttribute("class");;
+
+})
+
+keyS.addEventListener("mousedown", function () {
+    if (!firedS) {
+        firedS = true;
+        keyS.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/S.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'S' has been clicked.");
+    }
+})
+
+keyS.addEventListener("mouseup", function () {
+    firedS = false;
+    keyS.removeAttribute("class");
+
+})
+
+keyD.addEventListener("mousedown", function () {
+    if (!firedD) {
+        firedD = true;
+        keyD.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/D.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'D' has been clicked.");
+    }
+})
+
+keyD.addEventListener("mouseup", function () {
+    firedD = false;
+    keyD.removeAttribute("class");
+
+})
+
+keyF.addEventListener("mousedown", function () {
+    if (!firedF) {
+        firedF = true;
+        keyF.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/F.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'F' has been clicked.");
+    }
+})
+
+keyF.addEventListener("mouseup", function () {
+    firedF = false;
+    keyF.removeAttribute("class");
+
+})
+
+keyG.addEventListener("mousedown", function () {
+    if (!firedG) {
+        firedG = true;
+        keyG.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/G.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'G' has been clicked.");
+    }
+})
+
+keyG.addEventListener("mouseup", function () {
+    firedG = false;
+    keyG.removeAttribute("class");
+
+})
+
+keyH.addEventListener("mousedown", function () {
+    if (!firedH) {
+        firedH = true;
+        keyH.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/H.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'H' has been clicked.");
+    }
+})
+
+keyH.addEventListener("mouseup", function () {
+    firedH = false;
+    keyH.removeAttribute("class");
+
+})
+
+keyJ.addEventListener("mousedown", function () {
+    if (!firedJ) {
+        firedJ = true;
+        keyJ.setAttribute("class", "active-white-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/J.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'J' has been clicked.");
+    }
+})
+
+keyJ.addEventListener("mouseup", function () {
+    firedJ = false;
+    keyJ.removeAttribute("class");
+
+})
+
+keyW.addEventListener("mousedown", function () {
+    if (!firedW) {
+        firedW = true;
+        keyW.setAttribute("class", "active-black-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/W.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'W' has been clicked.");
+    }
+})
+
+keyW.addEventListener("mouseup", function () {
+    firedW = false;
+    keyW.removeAttribute("class");
+})
+
+keyE.addEventListener("mousedown", function () {
+    if (!firedE) {
+        firedE = true;
+        keyE.setAttribute("class", "active-black-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/E.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'E' has been clicked.");
+    }
+})
+
+keyE.addEventListener("mouseup", function () {
+    firedE = false;
+    keyE.removeAttribute("class");
+
+})
+
+keyT.addEventListener("mousedown", function () {
+    if (!firedT) {
+        firedT = true;
+        keyT.setAttribute("class", "active-black-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/T.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'T' has been clicked.");
+    }
+})
+
+keyT.addEventListener("mouseup", function () {
+    firedT = false;
+    keyT.removeAttribute("class");
+
+})
+
+keyY.addEventListener("mousedown", function () {
+    if (!firedY) {
+        firedY = true;
+        keyY.setAttribute("class", "active-black-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/Y.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'Y' has been clicked.");
+    }
+})
+
+keyY.addEventListener("mouseup", function () {
+    firedY = false;
+    keyY.removeAttribute("class");
+
+})
+
+keyU.addEventListener("mousedown", function () {
+    if (!firedU) {
+        firedU = true;
+        keyU.setAttribute("class", "active-black-key");
+        let audio = document.createElement("AUDIO");
+        audio.src = "./sounds/U.mp3";
+        audio.volume = volume;
+        audio.play();
+        console.log("The 'U' has been clicked.");
+    }
+})
+
+keyU.addEventListener("mouseup", function () {
+    firedU = false;
+    keyU.removeAttribute("class");
+
+})
+
+/* Keyboard event listeners */
 document.addEventListener("keypress", function (event) {
     if (event.key === "a") {
         if (!firedA) {

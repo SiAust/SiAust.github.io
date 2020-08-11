@@ -67,24 +67,22 @@
 
     <div class="row" style="padding: 20px">
 
-        <!-- Music Advisor card -->
+        <!-- Spring Web Quiz card -->
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="resources/example.gif" height="255px" style="border-radius:4px 4px 0px 0px">
+            <div class="card mb-4 shadow-sm"><img
+                    src="http://coderscampus.com/wp-content/uploads/2016/06/spring-boot-project-logo.png"
+                    alt="Spring Boot logo">
                 <div class="card-body">
-                    <p class="card-text">This CLI app allows the client to log in the Spotify and request information
-                    on music by category.</p>
+                    <p class="card-text">Springboot project creating a web quiz. Using RESTful techniques to
+                        make a API that serializes and deserializes DTOs to a H2 database.</p>
                     <hr>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <a href="https://github.com/SiAust/Music-Advisor">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">
-                                    <i class="devicon-github-plain colored"></i>
-                                </button>
-                            </a>
-
-                        </div><i class="devicon-java-plain"></i>
-<!--                        <small class="text-muted">Java, JSON and OAuth</small>-->
+                        <a href="https://github.com/SiAust/Web-Quiz-App">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                <i class="devicon-github-plain"></i>
+                            </button>
+                        </a>
+                        <i class="devicon-java-plain"></i>
                     </div>
                 </div>
             </div>
@@ -95,7 +93,7 @@
             <div class="card mb-4 shadow-sm">
                 <img src="resources/virtual_piano.jpg" height="255px" style="border-radius:4px 4px 0px 0px">
                 <div class="card-body">
-                    <p class="card-text">A virtual piano which plays sounds ok keypress or click.</p>
+                    <p class="card-text">A virtual piano which plays sounds on keypress or click.</p>
                     <hr>
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="https://github.com/SiAust/Virtual-Piano">
@@ -186,22 +184,24 @@
             </div>
         </div>
 
-        <!-- Spring Web Quiz card -->
+        <!-- Music Advisor card -->
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm"><img
-                    src="http://coderscampus.com/wp-content/uploads/2016/06/spring-boot-project-logo.png"
-                    alt="Spring Boot logo">
+            <div class="card mb-4 shadow-sm">
+                <img src="resources/example.gif" height="255px" style="border-radius:4px 4px 0px 0px">
                 <div class="card-body">
-                    <p class="card-text">Springboot project creating a web quiz. Using RESTful techniques to
-                    make a API that serializes and deserializes DTOs to a H2 database.</p>
+                    <p class="card-text">This CLI app allows the client to log in the Spotify and request information
+                        on music by category.</p>
                     <hr>
                     <div class="d-flex justify-content-between align-items-center">
-                        <a href="https://github.com/SiAust/Web-Quiz-App">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
-                                <i class="devicon-github-plain"></i>
-                            </button>
-                        </a>
-                        <i class="devicon-java-plain"></i>
+                        <div>
+                            <a href="https://github.com/SiAust/Music-Advisor">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <i class="devicon-github-plain colored"></i>
+                                </button>
+                            </a>
+
+                        </div><i class="devicon-java-plain"></i>
+                        <!--                        <small class="text-muted">Java, JSON and OAuth</small>-->
                     </div>
                 </div>
             </div>
@@ -211,8 +211,20 @@
     <!-- Contact section -->
     <div id="contact">
         <h3>Contact</h3>
-        <p style="margin-left: 20px">If you would like to contact me please use the links below to send me a message, or alternatetively
-            <a href="mailto:simona.developer@gmail.com">send me an email</a>.</p>
+        <p style="margin-left: 20px">If you would like to contact me please use the links below to send me a message, or
+            alternatively use the form below to send me an email.</p>
+
+        <form style="margin-left: 20px" action="mailto:simona.developer@gmail.com"
+        method="post" enctype="text/plain">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="comment">Comments</label><br>
+<!--            <input type="text" id="comment" name="comment"><br><br>-->
+            <textarea name="comment" id="comment" cols="30" rows="5" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 
     <!-- Bottom navigation bar -->

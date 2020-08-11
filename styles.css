@@ -173,7 +173,7 @@ li a.active {
     height: auto;
 }
 
-p {
+p, label, input {
     /*padding: 20px;*/
     margin: 0;
     font-family: 'Roboto Slab', monospace;

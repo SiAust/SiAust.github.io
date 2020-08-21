@@ -1,0 +1,214 @@
+div, button {
+    font-family: "Agency FB", monospace;
+    font-size: 28px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+a {
+    color: black;
+    text-shadow: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-shadow: gray 4px 4px 5px;
+}
+
+kbd {
+    border: gray solid 2px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 18px;
+    padding: 2px;
+    text-shadow: none;
+    background-color: darkgray;
+}
+
+p {
+    margin: 10px;
+}
+
+/* The background objects */
+
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    max-width: 1400px;
+    z-index: 1;
+}
+
+.grass {
+    width: 300%;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    /*background-color: green;*/
+    background-image: url("resources/img/grass.png");
+    animation: none 10s linear infinite;
+    filter: grayscale(100%); /* Adds greyscale to the background image (T-Rex effect) */
+}
+
+.stadium {
+    width: 300%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: darkgreen;
+    background-image: url("resources/img/stadium.png");
+    background-size: 1806px;
+    filter: grayscale(100%); /* Adds greyscale to the background image (T-Rex effect) */
+    animation: none 10s linear infinite;
+}
+
+@keyframes slideshow {
+    0%    { left: 0;}
+    100%  { left: -200%; }
+}
+
+/* Scoreboard and game over divs */
+
+.playGame {
+    position: relative;
+    margin: 10px auto auto;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+
+    /*border: blue dashed 2px;*/
+    /*border-radius: 10px;*/
+
+}
+
+.scoreBoard {
+    display: none;
+    position: relative;
+    /*margin: 10px auto auto;*/
+    left: 70%;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+
+    /*border: blue dashed 2px;*/
+    /*border-radius: 10px;*/
+}
+
+@keyframes scoreHighlight {
+    /*0% {transform: rotate(0deg)}*/
+    /*25% {font-size: x-large}*/
+    50% {color: gray}
+    /*75% {font-size: x-large}*/
+    /*100% {transform: rotate(360deg)}*/
+}
+
+
+#hs  {
+    padding-right: 30px;
+}
+
+.gameOver {
+    display: none;
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin: 10px auto auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#GOspan {
+    animation: gameOverAnim 1s linear infinite;
+}
+
+@keyframes gameOverAnim {
+    0% { opacity: 100%}
+    50% { opacity: 20%;}
+    100% { opacity: 100%; }
+
+}
+
+button {
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+}
+
+button:hover {
+    /*box-shadow: 2px 2px white;*/
+    cursor: pointer;
+    text-shadow: gray 4px 4px 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* The divs which hold the player and obstacle objects */
+
+.grid {
+    /*position: relative;*/
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+}
+
+.player {
+    position: absolute;
+    bottom: 0;
+    left: auto; /* stops uncaught exception in index.js line 101 */
+    width: 200px;
+    height: 200px;
+    background-image: url("resources/img/attacker_stand.png");
+    background-size: 100% 100%;
+    filter: grayscale(100%);
+    animation: none 1s linear infinite;
+}
+
+@keyframes fall {
+    0% { bottom: 100px; left: 50px}
+    50% {bottom: 50px; left: 25px}
+    100% {bottom: 0; left: 0}
+
+}
+
+@keyframes tackled {
+    50% { transform: rotateX(10deg)}
+}
+
+.football {
+    position: absolute;
+    bottom: 10px;
+    left: 100px; /* stops uncaught exception in index.js line 101 */
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    filter: grayscale(100%);
+    background-image: url("resources/img/football.png");
+    animation: none 0.5s linear infinite;
+}
+
+@keyframes bobble {
+    50% { bottom: 13px; left: 110px}
+}
+
+@keyframes dodge {
+    50% { bottom: 150px; left: 130px}
+}
+
+.defender {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url("resources/img/defender_run1.png");
+    background-size: 100% 100%;
+    filter: grayscale(100%);
+}
+
+

@@ -1,23 +1,4 @@
 /* Animations */
-@keyframes digger-animation {
-    0% {left: 0; top: 0}
-    25% {left: 300px; top: 0}
-    50% {left: 200px; top: 0}
-    75% {left: 300px; top: 0}
-    100% {left: 0; top: 0}
-}
-
-@keyframes roller-animation {
-    0% {right: 0; top: 0}
-    25% {right: 300px; top: 0}
-    50% {right: 250px; top: 0}
-    60% {right: 300px; top: 0}
-    70% {right: 250px; top: 0}
-    75% {right: 300px; top: 0}
-    80% {right: 250px; top: 0}
-    90% {right: 300px; top: 0}
-    100% {right: 0; top: 0}
-}
 
 @keyframes profile-pic-animation {
     0% {}
@@ -26,22 +7,6 @@
 }
 
 /* Tag and ID classes */
-
-#digger {
-    /*size: initial;*/
-    animation-name: digger-animation;
-    animation-duration: 12s;
-    animation-delay: 2s;
-    position: relative;
-}
-
-#roller {
-    size: auto;
-    animation-name: roller-animation;
-    animation-duration: 10s;
-    animation-delay: 10s;
-    position: relative;
-}
 
 body {
     /*background-image: url("https://i.ytimg.com/vi/Jnwu4ZhB0ac/maxresdefault.jpg");*/
@@ -52,7 +17,7 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     background-color: rgba(158, 158, 158, 0.51);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0px;
@@ -156,6 +121,23 @@ li.dropdown {
 li a.active {
     border-bottom: 2px solid #fff922;
 }
+
+/* Cards related styles */
+
+.card {
+    transition: background 3s, border 2s;
+    min-height: 550px;
+}
+.card:hover {
+    background: #464b81; /*linear-gradient(to bottom right, #464b81, #398a9f);*/
+    border: #464b80 1px solid;
+}
+
+.btn-outline-secondary:hover {
+    border-color: white;
+}
+
+/* Bottom navigation styles */
 
 #bottom-nav {
     top: unset;

@@ -29,9 +29,13 @@ p {
     margin: 10px;
 }
 
+.center {
+    text-align: center;
+}
 /* The background objects */
 
 .container {
+    margin: auto;
     position: relative;
     overflow: hidden;
     height: 350px;

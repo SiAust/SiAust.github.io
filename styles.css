@@ -1,12 +1,4 @@
-/* Animations */
-
-@keyframes profile-pic-animation {
-    0% {}
-    50% {filter: invert(100%)}
-    100% {filter: none}
-}
-
-/* Tag and ID classes */
+/* Tag, ID and global scope classes */
 
 body {
     /*background-image: url("https://i.ytimg.com/vi/Jnwu4ZhB0ac/maxresdefault.jpg");*/
@@ -25,21 +17,82 @@ body {
     margin: auto;
 }
 
+.slanting-div {
+    background: #333;
+    content: "";
+    height: 40px;
+    width: 105%;
+    /*left: -5%;*/
+    position: absolute;
+    right: -5%;
+    top: 101%;
+    transform-origin: 0 0;
+    transform: rotateZ(-2deg);
+    z-index: 1;
+}
+
+/* Header styles */
 
 .header {
     display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-pic {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)),
+                url("resources/header.jpg") no-repeat bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    animation: fade-slide-down 2s .5s ease-out forwards;
+}
+
+@keyframes fade-slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100% {
+        opacity: 100%;
+        transform: none;
+    }
+}
+
+.header-container {
+    transform: translateY(-50%);
+    top: 50%;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    padding: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #333;
+    height: auto;
+    width: 24%;
+    transition: width 2s;
 }
 
 #header-text {
-    background-color: white;
+    color: white;
     padding: 10px;
+    text-shadow: 2px 2px 3px #333;
 }
 
-/*#header-text:hover {*/
-/*    color: black;*/
-/*    border: none;*/
-/*    margin: 0px;*/
-/*}*/
+.header p {
+    font-size: 16px;
+}
+
+.header .slanting-div {
+    width: 200%;
+    height: 75px;
+}
+
+/* Navigation and dropdown menu styles */
+
 ul {
     /*float: right;*/
     /*color: white;*/
@@ -75,6 +128,7 @@ li a, .dropBtn {
     font-family: 'Roboto Slab', monospace;
     font-size: 16px;
     border-bottom: 2px solid #333;
+    transition: border-bottom-color 1s linear;
     /*margin-bottom: 10px;*/
 }
 
@@ -111,8 +165,6 @@ li.dropdown {
     font-size: 12px;
 }
 
-/*.dropdown-content a:hover {background-color: #f1f1f1;}*/
-
 .dropdown:hover .dropdown-content{
     display: block;
     /*border-bottom: 2px solid #fff922;*/
@@ -124,17 +176,55 @@ li a.active {
 
 /* Cards related styles */
 
+.card-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .card {
-    transition: background 3s, border 2s;
+    transition: background 2s, border 1s, color 2s;
     min-height: 550px;
 }
+
 .card:hover {
     background: #464b81; /*linear-gradient(to bottom right, #464b81, #398a9f);*/
     border: #464b80 1px solid;
+    color: white;
+}
+
+.card-text {
+    transition: color 2s;
+}
+
+.card:hover .card-text {
+    color: white;
+}
+
+.card-icons {
+    margin-top: 30%;
+}
+
+.btn-outline-secondary {
+    transition: all 1s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-outline-secondary:hover {
     border-color: white;
+}
+
+.cards-after {
+    background: #333;
+    content: "";
+    height: 40px;
+    width: 105%;
+    /*left: -5%;*/
+    position: absolute;
+    right: -5%;
+    top: 101%;
+    transform-origin: 0 0;
+    transform: rotateZ(-2deg);
+    z-index: 1;
 }
 
 /* Bottom navigation styles */
@@ -163,29 +253,9 @@ p, label, input {
     color: black;
 }
 
-
-/*li p {*/
-/*    display: inline-block;*/
-/*    color: white;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-family: monospace;*/
-/*    border-bottom: 2px solid #333;*/
-/*}*/
-
-
-
-/*li a:hover {*/
-/*    !*background-color: #454542;*!*/
-/*    text-decoration: none;*/
-/*    color: white;*/
-/*    !*border-radius: 10%;*!*/
-/*    padding: 14px 16px;*/
-/*    border-bottom: 2px solid #fff922;*/
-/*}*/
-
 #contact {
+    position: relative;
+    overflow: hidden;
     background-color: white;
     padding-bottom: 100px;
     padding-top: 20px;
@@ -196,18 +266,6 @@ h3 {
     font-family: 'Roboto Slab', monospace;
 
 }
-
-
-/*.active {*/
-/*    background-color: #454542;*/
-/*}*/
-/* make social fa buttons bounce */
-/*.nav-list {*/
-/*    float: right;*/
-/*    !*padding-right: 20px;*!*/
-/*    !*padding-left: 20px;*!*/
-/*    color: white;*/
-/*}*/
 
 .bottom-nav-list {
     float: bottom;
@@ -227,22 +285,6 @@ h3 {
     display: flex;
     justify-content: center;
 }
-
-.my-pic {
-    /*border: 10px dashed blue;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    height: auto;
-    width: 24%;
-    transition: width 2s;
-    /*border-radius: 10px 10px 0 0;*/
-    /*animation-name: profile-pic-animation;*/
-    /*animation-duration: 10s;*/
-}
-
-/*.my-pic:hover {*/
-/*    width: 21%;*/
-/*}*/
 
 .clearfix {
     overflow: auto;

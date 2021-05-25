@@ -38,6 +38,7 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
 }
@@ -81,7 +82,7 @@ body {
 
 #header-text {
     color: white;
-    padding: 10px;
+    padding: 1rem;
     text-shadow: 2px 2px 3px #333;
 }
 
@@ -92,6 +93,38 @@ body {
 .header .slanting-div {
     width: 200%;
     height: 75px;
+}
+
+/* Name and skills  */
+.name-skills {
+    /* transform: translateY(-50%); */
+    display: flex;
+    /* justify-content: space-between; */
+    
+    color: white;
+
+    width: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 14%;
+}
+
+#my-name p {
+    font-family: monospace;
+    font-size: xxx-large;
+
+    color: cornflowerblue;
+
+    padding: 1rem;
+}
+
+#typed-lang {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem;
 }
 
 /* Navigation and dropdown menu styles */
@@ -338,4 +371,11 @@ ul i:hover {
 
 .clearfix {
     overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #my-name p {
+        font-size: x-large;
+    }
+    
 }

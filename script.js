@@ -23,3 +23,4 @@ var typed = new Typed('#typed-code', {
     backDelay: 2000
   });
   
+

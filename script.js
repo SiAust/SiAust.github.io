@@ -19,8 +19,7 @@ var typed = new Typed('#typed-code', {
     loop: true,
     loopCount: Infinity,
     typeSpeed: 100,
-    backSpeed: 50,
+    backSpeed: 120,
     backDelay: 2000
   });
-  
 

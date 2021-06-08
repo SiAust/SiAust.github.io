@@ -7,7 +7,9 @@
     <link rel="icon" color="blue">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Local CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hero-name.css">
     <!-- JQuerry -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <!-- Typed.js -->
@@ -24,23 +26,42 @@
 <body>
 
 <div id="home" class="container">
+
     <!-- My profile -->
     <div class="header" style="z-index: 2">
-<!--        <img class="header-pic" src="resources/fabien.jpg" alt="Fabian sea image">-->
-        <div class="name-skills">
-            <div id="my-name">
-                <p>Simon Aust</p>
-            </div>
-            <div id="typed-lang">
-                <span id="typed-code"></span>
-            </div>
-        </div>
+
         <div class="header-pic"></div>
+
         <div class="slanting-div"></div>
+
         <div class="header-container">
-            <img class="profile-pic"
-                  style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"
-                  src="resources/profile.png">
+
+            <div class="hero-name">
+            
+                <svg id="hero-svg" width="729" height="110" viewBox="0 0 729 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.53125 90.8438C15.3594 96.1875 26.9609 98.8594 39.3359 98.8594C54.5703 98.8594 62.1875 91.9219 62.1875 78.0469C62.1875 73.5469 60.9688 69.9141 58.5312 67.1484C56.1406 64.3359 51.7578 62.1328 45.3828 60.5391L24.7109 55.3359C8.91406 51.3516 1.01562 42.9141 1.01562 30.0234C1.01562 20.1328 4.41406 12.7969 11.2109 8.01562C18.0078 3.1875 27.4062 0.773438 39.4062 0.773438C45.6875 0.773438 51.5703 1.45312 57.0547 2.8125C62.5391 4.17188 67.1328 6 70.8359 8.29688L67.3203 18.2109C64.1797 16.4766 60.0078 14.9297 54.8047 13.5703C49.6484 12.2109 44.4219 11.5312 39.125 11.5312C22.1562 11.5312 13.6719 17.4141 13.6719 29.1797C13.6719 33.1641 14.9609 36.375 17.5391 38.8125C20.1641 41.2031 24.0781 43.0312 29.2812 44.2969L49.0391 49.0781C57.4766 51.0938 63.875 54.3281 68.2344 58.7812C72.5938 63.1875 74.7734 69.4688 74.7734 77.625C74.7734 88.2188 71.5156 96.2109 65 101.602C58.5312 106.945 49.7188 109.617 38.5625 109.617C30.2188 109.617 22.7891 108.773 16.2734 107.086C9.80469 105.352 4.67188 103.312 0.875 100.969L4.53125 90.8438Z" fill="black"/>
+                    <path d="M104.516 30.8672V108H92.7031V30.8672H104.516ZM104.516 2.8125V16.7344H92.7031V2.8125H104.516Z" fill="black"/>
+                    <path d="M224.609 108V67.8516C224.609 64.1016 224.516 60.9609 224.328 58.4297C224.188 55.8984 223.812 53.3203 223.203 50.6953C222.641 48.0703 221.82 46.0078 220.742 44.5078C219.711 42.9609 218.258 41.7188 216.383 40.7812C214.508 39.7969 212.258 39.3047 209.633 39.3047C204.477 39.3047 200.07 40.6875 196.414 43.4531C192.805 46.2188 190.227 50.1094 188.68 55.125C188.258 58.5 188.047 62.1094 188.047 65.9531V108H176.305V66.5859C176.305 63.1172 176.188 60.1172 175.953 57.5859C175.719 55.0078 175.273 52.5234 174.617 50.1328C173.961 47.6953 173.07 45.7266 171.945 44.2266C170.867 42.7266 169.414 41.5312 167.586 40.6406C165.758 39.75 163.578 39.3047 161.047 39.3047C155.422 39.3047 150.688 40.7344 146.844 43.5938C143.047 46.4531 140.492 50.25 139.18 54.9844C138.758 58.5938 138.547 62.5078 138.547 66.7266V108H126.805C126.711 59.7656 126.664 34.0547 126.664 30.8672H136.508L137.984 41.9062C140.328 38.3438 143.656 35.3438 147.969 32.9062C152.281 30.4688 157.18 29.25 162.664 29.25C165.523 29.25 168.148 29.5547 170.539 30.1641C172.977 30.7266 174.992 31.4531 176.586 32.3438C178.227 33.2344 179.68 34.3125 180.945 35.5781C182.211 36.7969 183.195 38.0156 183.898 39.2344C184.602 40.4062 185.188 41.6484 185.656 42.9609C191.281 33.8203 199.883 29.25 211.461 29.25C220.039 29.25 226.32 31.7109 230.305 36.6328C234.336 41.5078 236.352 48.75 236.352 58.3594V108H224.609Z" fill="black"/>
+                    <path d="M259.977 69.6094C259.977 78.75 261.992 86.0859 266.023 91.6172C270.102 97.1016 276.031 99.8438 283.812 99.8438C291.5 99.8438 297.289 97.1016 301.18 91.6172C305.117 86.1328 307.086 78.75 307.086 69.4688C307.086 60.0469 305.141 52.6406 301.25 47.25C297.406 41.8125 291.523 39.0938 283.602 39.0938C275.914 39.0938 270.055 41.8594 266.023 47.3906C261.992 52.9219 259.977 60.3281 259.977 69.6094ZM319.25 69.3984C319.25 81.3516 316.062 91.0547 309.688 98.5078C303.312 105.914 294.5 109.617 283.25 109.617C272.422 109.617 263.797 105.867 257.375 98.3672C251 90.8672 247.812 81.2344 247.812 69.4688C247.812 57.4688 251.023 47.7656 257.445 40.3594C263.867 32.9531 272.68 29.25 283.883 29.25C294.898 29.25 303.547 32.9766 309.828 40.4297C316.109 47.8359 319.25 57.4922 319.25 69.3984Z" fill="black"/>
+                    <path d="M335.914 108V30.8672H345.758L347.234 41.9062C350.281 38.1094 354.078 35.0625 358.625 32.7656C363.219 30.4219 368.164 29.25 373.461 29.25C382.367 29.25 388.953 31.7578 393.219 36.7734C397.484 41.7422 399.617 49.4062 399.617 59.7656V108H387.875C387.875 77.0625 387.852 60.4922 387.805 58.2891C387.617 51.7266 386.281 46.9219 383.797 43.875C381.359 40.8281 377.258 39.3047 371.492 39.3047C365.445 39.3047 360.406 40.7578 356.375 43.6641C352.344 46.5703 349.719 50.3438 348.5 54.9844C348.031 58.125 347.797 61.7344 347.797 65.8125V108H335.914Z" fill="black"/>
+                    <path d="M507.828 64.8281C497.938 36.0938 492.477 19.9453 491.445 16.3828C491.445 16.3828 485.75 32.5312 474.359 64.8281H507.828ZM523.93 108L511.766 75.0234H470.281L457.695 108H445.32L485.258 3.79688H497.703L536.445 108H523.93Z" fill="black"/>
+                    <path d="M544.039 82.2656V30.8672H555.852V82.4062C555.852 85.7812 556.32 88.6406 557.258 90.9844C558.242 93.3281 559.625 95.1562 561.406 96.4688C563.234 97.7344 565.273 98.6484 567.523 99.2109C569.82 99.7734 572.445 100.055 575.398 100.055C581.492 100.055 586.227 98.7188 589.602 96.0469C593.023 93.375 594.734 88.8281 594.734 82.4062V30.8672H606.547V82.2656C606.547 86.2031 605.984 89.7422 604.859 92.8828C603.734 96.0234 602.211 98.6484 600.289 100.758C598.414 102.82 596.141 104.531 593.469 105.891C590.797 107.25 587.961 108.234 584.961 108.844C582.008 109.453 578.82 109.758 575.398 109.758C572.023 109.758 568.836 109.453 565.836 108.844C562.836 108.234 559.977 107.25 557.258 105.891C554.586 104.484 552.266 102.75 550.297 100.688C548.375 98.5781 546.852 95.9531 545.727 92.8125C544.602 89.6719 544.039 86.1562 544.039 82.2656Z" fill="black"/>
+                    <path d="M647.047 109.617C641.797 109.617 636.945 109.055 632.492 107.93C628.086 106.805 624.5 105.352 621.734 103.57L623.211 93.6562C631.039 97.8281 638.727 99.9141 646.273 99.9141C657.711 99.9141 663.594 95.8828 663.922 87.8203C663.922 84.3984 662.703 81.7031 660.266 79.7344C657.828 77.7656 653.047 75.5625 645.922 73.125L640.086 71.0859C633.336 68.8359 628.508 66.0469 625.602 62.7188C622.742 59.3906 621.289 55.2422 621.242 50.2734C621.242 44.2266 623.656 39.2109 628.484 35.2266C633.359 31.2422 640.016 29.25 648.453 29.25C657.172 29.25 665.117 30.9375 672.289 34.3125L668.844 43.3125C661.578 40.3125 654.781 38.8125 648.453 38.8125C643.531 38.8125 639.664 39.7969 636.852 41.7656C634.086 43.6875 632.703 46.4062 632.703 49.9219C632.703 52.9219 633.711 55.2188 635.727 56.8125C637.742 58.4062 641.773 60.2344 647.82 62.2969C649.367 62.8594 651.312 63.5156 653.656 64.2656C661.438 66.7969 666.945 69.7969 670.18 73.2656C673.414 76.6875 675.031 81.3281 675.031 87.1875C674.938 94.3125 672.383 99.8438 667.367 103.781C662.352 107.672 655.578 109.617 647.047 109.617Z" fill="black"/>
+                    <path d="M715.742 109.406C708.148 109.406 702.758 107.555 699.57 103.852C696.383 100.148 694.695 94.1719 694.508 85.9219V39.5859H683.047L683.539 31.8516L694.438 30.8672L698.445 13.2188L706.18 12.9375V30.8672H727.625V39.5859H706.18V83.8125C706.18 89.6719 707.07 93.7969 708.852 96.1875C710.633 98.5781 713.68 99.7734 717.992 99.7734C719.539 99.7734 722.891 99.3984 728.047 98.6484L728.539 107.93C722.961 108.914 718.695 109.406 715.742 109.406Z" fill="black"/>
+                    </svg>
+                   
+            </div>
+
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: inherit;">    
+
+                <img class="profile-pic" src="resources/profile.png">
+
+                <!-- Typed.js creates a typing effect for a array of words -->
+                <div id="typed-lang">
+                    <span id="typed-code"></span>
+                </div>
+
+            </div>
 
             <p id="header-text">Software developer based near Bournemouth on the beautiful south coast of England. <br><br> 
                 I have experience developing back end apps with Springboot, and dynamic frontend web pages driven through
@@ -53,7 +74,9 @@
                 I like to stay active and enjoy walks, jogging and cycling in the forest. I volunteer with some local
                 environment groups to improve recycling options and raise awareness of climate issues.<br><br>
             </p>
+
         </div>
+
     </div>
 
     <!-- Top Navigation links -->
@@ -122,9 +145,14 @@
                             make a API that serializes and deserializes DTOs to a H2 database.</p>
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/SiAust/Web-Quiz-App">
+                            <a href="https://github.com/SiAust/Web-Quiz-App" target="_blank">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">
                                     <i class="devicon-github-plain"></i>
+                                </button>
+                            </a>
+                            <a href="https://spring-web-quiz.herokuapp.com/" target="_blank">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-link"></i>
                                 </button>
                             </a>
                             <i class="devicon-java-plain"></i>
@@ -141,7 +169,7 @@
                         <p class="card-text">A virtual piano which plays sounds on keypress or click.</p>
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/SiAust/Virtual-Piano">
+                            <a href="https://github.com/SiAust/Virtual-Piano" target="_blank">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">
                                     <i class="devicon-github-plain"></i>
                                 </button>
@@ -168,7 +196,7 @@
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
 
-                            <a href="https://github.com/SiAust/Pets_Database_App">
+                            <a href="https://github.com/SiAust/Pets_Database_App" target="_blank">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">
                                     <i class="devicon-github-plain"></i>
                                 </button>
@@ -198,7 +226,7 @@
                             from a user directory, search through the text using plaintext or regular expressions.</p>
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/SiAust/Text-Editor">
+                            <a href="https://github.com/SiAust/Text-Editor" target="_blank">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">
                                     <i class="devicon-github-plain"></i>
                                 </button>
@@ -232,7 +260,7 @@
                             scoring techniques, counting syllables, vowels and other patterns to the text structure.</p>
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/SiAust/Readability">
+                            <a href="https://github.com/SiAust/Readability" target="_blank">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">
                                     <i class="devicon-github-plain"></i>
                                 </button>
@@ -254,7 +282,7 @@
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <a href="https://github.com/SiAust/Music-Advisor">
+                                <a href="https://github.com/SiAust/Music-Advisor" target="_blank">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">
                                         <i class="devicon-github-plain"></i>
                                     </button>
@@ -291,20 +319,32 @@
         </form>
 
         <div class="slanting-div"></div>
+
     </div>
 
     <!-- Bottom navigation bar -->
-    <div>
+    <footer>
+        
         <ul class="flex-box" id="bottom-nav" style="bottom: 0">
-            <li class="bottom-nav-list col-xs-3"><a href="https://www.instagram.com/silicone_1882/" target="_blank"><i
-                    class="fab fa-instagram"></i></a></li>
-            <li class="bottom-nav-list col-xs-3"><a href="https://www.linkedin.com/in/simon-aust-73ab40165"
-                                                    target="_blank"><i
-                    class="fab fa-linkedin"></i></a></li>
-            <li class="bottom-nav-list col-xs-3"><a href="https://github.com/SiAust" target="_blank"><i
-                    class="fab fa-github"></i></a></li>
+            <li class="bottom-nav-list col-xs-3">
+                <a href="https://twitter.com/DarkKnight1882" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="bottom-nav-list col-xs-3">
+                <a href="https://www.linkedin.com/in/simon-aust-73ab40165"
+                                                    target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="bottom-nav-list col-xs-3">
+                <a href="https://github.com/SiAust" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
         </ul>
-    </div>
+
+    </footer>
 </div>
 
 <script src="script.js"></script>

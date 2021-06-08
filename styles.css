@@ -4,13 +4,16 @@ html {
 }
 
 body {
-    background-image: url("resources/seamless-bg.jpg");
-    background-color: #464b82;
-    background-repeat: repeat;
+    /* background-image: url("resources/seamless-bg.jpg"); */
+    background: linear-gradient(23deg, #4863A0,#98AFC7);
+    /* background-repeat: repeat; */
     padding: 0;
     margin: 0;
 }
 
+footer {
+    margin-bottom: 2rem;
+}
 .container {
     width: 80%;
     background-color: rgba(158, 158, 158, 0.51);
@@ -76,7 +79,7 @@ body {
     border-radius: 50%;
     box-shadow: 2px 2px 5px #333;
     height: auto;
-    width: 24%;
+    width: 16rem;
     transition: width 2s;
 }
 
@@ -96,34 +99,13 @@ body {
 }
 
 /* Name and skills  */
-.name-skills {
-    /* transform: translateY(-50%); */
-    display: flex;
-    /* justify-content: space-between; */
-    
-    color: white;
 
-    width: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 14%;
-}
-
-#my-name p {
-    font-family: monospace;
-    font-size: xxx-large;
-
-    color: cornflowerblue;
-
-    padding: 1rem;
-}
 
 #typed-lang {
     display: flex;
     align-items: center;
-
+    color: #a89e5f;
+    font-size: x-large;
     padding: 1rem;
 }
 
@@ -353,6 +335,7 @@ h3 {
 
 i {
     transition: color 2s;
+    font-size: 2rem;
 }
 
 ul i:hover {

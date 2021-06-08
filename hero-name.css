@@ -1,0 +1,101 @@
+.hero-name {
+    display: flex;
+    
+    color: white;
+
+    width: 50%;
+    /* Centers to element 50% */
+    /* transform: translateX(-50%); */
+    position: absolute;
+    z-index: 1;
+    left: 18rem;
+    top: -5rem;
+}
+
+#hero-svg path:nth-child(1) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 511.1132;
+    stroke-dashoffset: 511.1132;
+    animation: stroke-fill 3s ease 1 forwards 3s;
+}
+
+#hero-svg path:nth-child(2) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 229.36099243164062;
+    stroke-dashoffset: 229.36099243164062;
+    animation: stroke-fill 3s ease 1 forwards 3.3s;
+}
+
+#hero-svg path:nth-child(3) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 632.4036865234375;
+    stroke-dashoffset: 632.4036865234375;
+    animation: stroke-fill 3s ease 1 forwards 3.6s;
+}
+
+#hero-svg path:nth-child(4) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 416.78350830078125;
+    stroke-dashoffset: 416.78350830078125;
+    animation: stroke-fill 3s ease 1 forwards 3.9s;
+}
+
+#hero-svg path:nth-child(5) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 407.93157958984375;
+    stroke-dashoffset: 407.93157958984375;
+    animation: stroke-fill 3s ease 1 forwards 4.2s;
+}
+
+#hero-svg path:nth-child(6) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 508.01275634765625;
+    stroke-dashoffset: 508.01275634765625;
+    animation: stroke-fill 3s ease 1 forwards 4.5s;
+}
+
+#hero-svg path:nth-child(7) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 384.58160400390625;
+    stroke-dashoffset: 384.58160400390625;
+    animation: stroke-fill 3s ease 1 forwards 4.8s;
+}
+
+#hero-svg path:nth-child(8) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 363.66119384765625;
+    stroke-dashoffset: 363.66119384765625;
+    animation: stroke-fill 3s ease 1 forwards 5.1s;
+}
+
+#hero-svg path:nth-child(9) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke:#a89e5f;
+    stroke-dasharray: 308.0753479003906;
+    stroke-dashoffset: 308.0753479003906;
+    animation: stroke-fill 3s ease 1 forwards 5.4s;
+}
+
+@keyframes stroke-fill {
+    to {
+        /* stroke-dasharray: 0; */
+        stroke-dashoffset: 0;
+    }
+}

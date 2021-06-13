@@ -234,6 +234,8 @@ li a.active {
 .card-container {
     position: relative;
     overflow: hidden;
+
+    padding-bottom: 3rem;
 }
 
 .card {
@@ -312,6 +314,10 @@ li a.active {
 /* ___ Blog */
 
 #blog-container {
+    position: relative;
+
+    overflow-x: clip;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -319,15 +325,19 @@ li a.active {
 
     background: #b2d33d;
     min-height: 30rem;
+
+    padding-bottom: 3rem;
 }
 
 #blog-container a {
-    width: 80%;
+    width: 75%;
+    height: auto;
     text-decoration: none;
+    transition: all 2s;
 }
 
 /* #blog-container a:hover {
-    width: 82%;
+    width: 80%;
     height: 101%;
 } */
 
@@ -408,10 +418,14 @@ p, label, input {
 
 #contact {
     position: relative;
-    overflow: hidden;
+    overflow-x: clip;
     background-color: white;
     padding-bottom: 100px;
     padding-top: 20px;
+}
+
+.top {
+    top: 0;
 }
 
 h3 {

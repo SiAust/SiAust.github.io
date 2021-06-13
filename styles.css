@@ -86,11 +86,9 @@ footer {
 #header-text {
     color: white;
     padding: 1rem;
-    text-shadow: 2px 2px 3px #333;
-}
 
-.header p {
     font-size: 16px;
+    text-shadow: 2px 2px 3px #333;
 }
 
 .header .slanting-div {
@@ -311,7 +309,7 @@ li a.active {
     z-index: 1;
 }
 
-/* Blog */
+/* ___ Blog */
 
 #blog-container {
     display: flex;
@@ -323,17 +321,63 @@ li a.active {
     min-height: 30rem;
 }
 
+#blog-container a {
+    width: 80%;
+    text-decoration: none;
+}
+
+/* #blog-container a:hover {
+    width: 82%;
+    height: 101%;
+} */
+
 .blog-card {
     background: #333;
     border: white 2px solid;
     border-radius: 3px;
 
-    width: 80%;
-    height: 100px;
+    margin: 1rem 0 2rem 0;
+
+    /* width: 80%; */
+    /* height: 100px; */
 }
 
 .blog-card p {
     color: white;
+    font-size: 16px;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.blog-card-img p {
+    padding: 1rem;
+}
+
+.blog-card-img {
+    position: relative;
+    height: 20rem;
+    background-size: cover;
+}
+
+.blog-tags {
+    position: absolute;
+
+    display: flex;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.tag {
+    margin: 0 1rem 0 0;
+
+    background-color: gray;
+
+    color: white;
+
+    border: white 2px solid;
+    border-radius: 12px;
+
+    padding: 5px;
+
 }
 
 /* Bottom navigation styles */
@@ -371,9 +415,15 @@ p, label, input {
 }
 
 h3 {
-    margin-left: 20px;
+    margin: 1rem 0 1rem 0;
     font-family: 'Roboto Slab', monospace;
 
+}
+
+h4 {
+    margin: 1rem;
+    font-family: 'Roboto Slab', monospace;
+    color: white;
 }
 
 .bottom-nav-list {

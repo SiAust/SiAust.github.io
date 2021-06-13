@@ -34,31 +34,49 @@ request.onload = function() {
     let response = JSON.parse(request.response)
     for (let i = 0; i < response.length; i++) {
         console.log(response[i].title)
+
+        /* Create wrapper link element */
+        let linkWrapper = document.createElement("a")
+        linkWrapper.href = response[i].url
+        linkWrapper.target = "_blank"
+
+        /* Create a new card */
         let card = document.createElement("div")
         card.className = "blog-card"
 
-        let title = document.createElement("p")
+        /* Create the title, description, background and date element */
+        let title = document.createElement("h4")
         title.innerHTML = response[i].title
+
         let desc = document.createElement("p")
         desc.innerHTML = response[i].description
+
+        /* Date */
         let date = document.createElement("p")
-        date.innerHTML= response[i].published_timestamp
+        let formattedDate = new Date(response[i].published_timestamp)
+        console.log(formattedDate.toLocaleString())
+        date.innerHTML= formattedDate.toLocaleString()
 
-        let link = document.createElement("a")
-        link.href = response[i].url
-        link.target = "_blank"
-        let button = document.createElement("button")
-        button.className = "btn btn-sm btn-outline-secondary"
-        let span = document.createElement("i")
-        span.className = "fas fa-link"
-        button.append(span)
-        link.append(button)
+        /* Blog-card header image */
+        let headerImg = document.createElement("div")
+        headerImg.className = "blog-card-img"
+        headerImg.style.backgroundImage = 'url("' + response[i].cover_image + '")'
 
-        card.append(title, desc, date, link)
+        /* Blog tags */
+        let tagDiv = document.createElement("div")
+        tagDiv.className = "blog-tags"
+        let tags = response[i].tag_list
+        for (let i = 0; i < tags.length; i++) {
+            let tag = document.createElement("div")
+            tag.className = "tag"
+            tag.innerHTML = tags[i]
+            tagDiv.append(tag)
+        }
+        headerImg.append(date, tagDiv)
 
-        BLOG_DIV.appendChild(card)
-
-
+        card.append(headerImg, title, desc)
+        linkWrapper.append(card)
+        BLOG_DIV.appendChild(linkWrapper)
     }
 }
 request.send()

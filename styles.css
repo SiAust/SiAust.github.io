@@ -11,6 +11,11 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  scroll-padding: 2rem;
+}
+
 footer {
   margin-bottom: 2rem;
 }
@@ -235,10 +240,12 @@ li a.active {
   position: relative;
   /* overflow: visible; */
 
+  background-color: slateblue;
+
   height: auto;
 
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
+  padding-bottom: 8rem;
+  /* margin-bottom: 3rem; */
 }
 
 #card-section {
@@ -269,39 +276,46 @@ li a.active {
   transition: all 1s;
 }
 
+/* center all articles, then control their position
+by translatingX from the center point. Keeps a symetric look */
 .card-article.prevSlide {
   transform: translate(-100%, -50%) scale(80%);
   left: 50%;
   /* top: 40%; */
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  /* transition: 1s 1s all; */
   z-index: 0;
 }
 
 /* invisible starting point for card to transition from */
 .card-article.prevSlide.offset {
-  transform: translate(-50%, -50%) scale(60%);
-  left: 60%;
+  transform: translate(-150%, -50%) scale(60%);
+  left: 50%;
   opacity: 0;
+  /* display: none;  */
 }
 
 .card-article.activeSlide {
   left: 50%;
   z-index: 1;
+  transition: scale() 4s, all 1s;
 }
 
 .card-article.nextSlide {
   transform: translate(0%, -50%) scale(80%);
   left: 50%;
   /* top: 40%; */
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  /* transition: 1s 1s all; */
   z-index: 0;
 }
 
 /* invisible starting point for card to transition from */
 .card-article.nextSlide.offset {
-  transform: translate(-50%, -50%) scale(60%);
-  right: -60%;
+  transform: translate(50%, -50%) scale(60%);
+  left: 50%;
   opacity: 0;
+  /* display: none; */
 }
 
 #card-section button {
@@ -322,11 +336,7 @@ li a.active {
 }
 
 .slider-btns {
-  /* position: absolute;
-  top: -13rem;
-  left: 50%;
-  transform: translateX(-50%); */
-  /* text-align: center; */
+  margin-bottom: 2rem;
 }
 /* 
 .slider-btns span {
@@ -520,6 +530,7 @@ button.sliderRight {
 /* ======================== */
 
 #bottom-nav {
+  display: flex;
   top: unset;
   z-index: 2;
   overflow: hidden;
@@ -573,8 +584,6 @@ h4 {
   display: block;
   padding-right: 20px;
   padding-left: 20px;
-  /*color: white;*/
-  margin: auto;
 }
 
 i {

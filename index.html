@@ -115,7 +115,7 @@
                     <li id="springDropBtn">
                         <a href="javascript:void(0)">Spring</a>
                         <div class="subMenu">
-                            <a href="https://github.com/SiAust/Web-Quiz-App">Web Quiz Engine</a>
+                            <a href="https://github.com/SiAust/Web-Quiz-App"  target="_blank">Web Quiz Engine</a>
                         </div>
                     </li>
                 </ul>
@@ -123,8 +123,8 @@
                     <li id="webDropBtn">
                         <a href="javascript:void(0)">HTML, CSS & JS</a>
                         <div class="subMenu">
-                            <a href="virtual_piano/virtual_piano.html">Virtual Piano</a>
-                            <a href="soccer_game/index.html">Soccer Run Game</a>
+                            <a href="virtual_piano/virtual_piano.html" target="_blank">Virtual Piano</a>
+                            <a href="soccer_game/index.html" target="_blank">Soccer Run Game</a>
                         </div>
                     </li>
                 </ul>
@@ -132,9 +132,9 @@
                     <li id="javaDropBtn">
                         <a href="javascript:void(0)">Java</a>
                         <div class="subMenu">
-                            <a href="https://github.com/SiAust/Music-Advisor">Music Advisor</a>
-                            <a href="https://github.com/SiAust/Text-Editor">Text Editor</a>
-                            <a href="https://github.com/SiAust/Readability">Readability</a>
+                            <a href="https://github.com/SiAust/Music-Advisor" target="_blank">Music Advisor</a>
+                            <a href="https://github.com/SiAust/Text-Editor" target="_blank">Text Editor</a>
+                            <a href="https://github.com/SiAust/Readability" target="_blank">Readability</a>
                         </div>
                     </li>
                 </ul>
@@ -142,7 +142,7 @@
                     <li id="droidDropBtn">
                         <a href="javascript:void(0)">Android</a>
                         <div class="subMenu">
-                            <a href="https://github.com/SiAust/Pets_Database_App">Pets Database</a>
+                            <a href="https://github.com/SiAust/Pets_Database_App" target="_blank">Pets Database</a>
                         </div>
                     </li>
                 </ul>
@@ -157,16 +157,58 @@
 
     <div class="card-container" id="card-container">
 
-        <div class="flex-box">
+        <div class="flex-box col">
             <h3>Projects</h3>
+            <div class="slider-btns">
+
+                <button class="sliderLeft" onclick="slider(false)"><span class="fas fa-chevron-left"></span></button>
+                <span style="font-size: 3rem;">/</span>
+                <button class="sliderRight" onclick="slider(true)"><span class="fas fa-chevron-right"></span></button>
+            </div>
         </div>
 
-        <!-- first card row -->
-        <div class="row" style="padding: 20px">
+        <div id="card-section">
+
+            <!-- Pet Database app card -->
+            <article class="card-article prevSlide">
+        
+
+                <div class="card">
+
+                    <div class="img-container">
+                        <img src="resources/pet_app.gif" alt="Android application demo video" height="255px"
+                            width="113px"
+                            style="border-radius: 4px 4px 0px 0px; margin: auto">
+                    </div>
+
+                    <div class="card-body">
+                        <h4>Pet Database</h4>
+                        <p class="card-text">This is a Android application built using Android Studio, implementing
+                            a SQLite database to create persistent pet objects.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <a href="https://github.com/SiAust/Pets_Database_App" target="_blank">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <i class="devicon-github-plain"></i>
+                                </button>
+                            </a>
+
+                            <i class="devicon-android-plain"></i>
+                            <i class="devicon-java-plain"></i>
+                            <!--                        <small class="text-muted">9 mins</small>-->
+                        </div>
+                    </div>
+                </div>
+            
+
+            </article>
 
             <!-- Spring Web Quiz card -->
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+            <article class="card-article activeSlide">  
+                
+                
+                <div class="card">
                     
                     <div class="img-container">
                         <img
@@ -175,6 +217,8 @@
                     </div>        
 
                     <div class="card-body">
+
+                        <h4>Web Quiz</h4>
                         <p class="card-text">
                             Web app where the user can play and create quizzes on many topics. 
                             The user may register and keep track of their score.
@@ -184,7 +228,7 @@
                             Springboot backend, Thymeleaf, JS, CSS frontend. Using RESTful principle to
                             make API calls to serialize and deserialize DTOs to a PostgrSQL database.
                             Deployed to Heroku.
-                         </p>
+                        </p>
                         <hr>
                         <div class="d-flex justify-content-between align-items-center">
                             <a href="https://github.com/SiAust/Web-Quiz-App" target="_blank">
@@ -201,12 +245,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </article>
 
             <!-- Virtual Piano card -->
-            <div class="col-md-4">
+            <article class="card-article nextSlide">
+        
 
-                <div class="card mb-4 shadow-sm">
+                <div class="card">
 
                     <div class="img-container">    
                         <img src="resources/virtual_piano.jpg"> <!-- height="255px" style="border-radius:4px 4px 0px 0px" --> 
@@ -214,6 +260,7 @@
 
                     <div class="card-body">
 
+                        <h4>Virtual Piano</h4>
                         <p class="card-text">
                             A virtual piano which plays sounds on keypress or click.
                             Adjustable sound volume using a themed slider. 
@@ -240,75 +287,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Pet Database app card -->
-            <div class="col-md-4">
-
-                <div class="card mb-4 shadow-sm">
-
-                    <div class="img-container">
-                        <img src="resources/pet_app.gif" alt="Android application demo video" height="255px"
-                            width="113px"
-                            style="border-radius: 4px 4px 0px 0px; margin: auto">
-                    </div>
-
-                    <div class="card-body">
-                        <p class="card-text">This is a Android application built using Android Studio, implementing
-                            a SQLite database to create persistent pet objects.</p>
-                        <hr>
-                        <div class="d-flex justify-content-between align-items-center">
-
-                            <a href="https://github.com/SiAust/Pets_Database_App" target="_blank">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">
-                                    <i class="devicon-github-plain"></i>
-                                </button>
-                            </a>
-
-                            <i class="devicon-android-plain"></i>
-                            <i class="devicon-java-plain"></i>
-                            <!--                        <small class="text-muted">9 mins</small>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- second card row -->
-        <div class="row" style="padding: 20px">
+            
+            </article>
 
             <!-- Text Editor card -->
-            <div class="col-md-4">
+            <article class="card-article nextSlide offset">
 
-                <div class="card mb-4 shadow-sm">
-
-                    <div class="img-container">
-                        <img src="https://github.com/SiAust/Text-Editor/raw/master/example.gif" height="255px"
-                            style="border-radius:4px 4px 0px 0px">
-                    </div>
-
-                    <div class="card-body">
-                        <p class="card-text">Using Java Swing GUI, I made a simple text editor that can load and save
-                            files
-                            from a user directory, search through the text using plaintext or regular expressions.</p>
-                        <hr>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/SiAust/Text-Editor" target="_blank">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">
-                                    <i class="devicon-github-plain"></i>
-                                </button>
-                            </a>
-                            <i class="devicon-java-plain"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Readability card -->
-            <div class="col-md-4">
-
-                <div class="card mb-4 shadow-sm">
+                <div class="card">
 
                     <div class="img-container">
                         <svg viewBox="0 0 128 128">
@@ -328,6 +313,8 @@
                     </div>
 
                     <div class="card-body">
+
+                        <h4>Text Editor</h4>
                         <p class="card-text">Interesting project that parses some text and marks it on readability by
                             various
                             scoring techniques, counting syllables, vowels and other patterns to the text structure.</p>
@@ -342,12 +329,43 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </article>
+
+            <!-- Readability card -->
+            <article class="card-article nextSlide offset">
+
+                <div class="card">
+
+                    <div class="img-container">
+                        <img src="https://github.com/SiAust/Text-Editor/raw/master/example.gif" height="255px"
+                            style="border-radius:4px 4px 0px 0px">
+                    </div>
+
+                    <div class="card-body">
+
+                        <h4>Readability</h4>
+                        <p class="card-text">Using Java Swing GUI, I made a simple text editor that can load and save
+                            files
+                            from a user directory, search through the text using plaintext or regular expressions.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="https://github.com/SiAust/Text-Editor" target="_blank">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <i class="devicon-github-plain"></i>
+                                </button>
+                            </a>
+                            <i class="devicon-java-plain"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
 
             <!-- Music Advisor card -->
-            <div class="col-md-4">
+            <article class="card-article nextSlide offset">
 
-                <div class="card mb-4 shadow-sm">
+                <div class="card">
 
                     <div class="img-container">
                         <img src="resources/example.gif" height="255px" style="border-radius:4px 4px 0px 0px">
@@ -355,6 +373,8 @@
 
 
                     <div class="card-body">
+
+                        <h4>Music Advisor</h4>
                         <p class="card-text">This CLI app allows the client to log in the Spotify and request
                             information
                             on music by category.</p>
@@ -373,10 +393,56 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </article>
+
+            <!-- Soccer Game card -->
+            <article class="card-article nextSlide offset">
+
+                <div class="card">
+
+                    <div class="img-container">
+                        <img src="resources/soccer_game.jpg" height="255px" style="border-radius:4px 4px 0px 0px">
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <h4>Flappy Soccer!</h4>
+                        <p class="card-text">
+                            A vanilla Javascript app which was inspired by the famous Flappy Bird game. <br>
+                            Players run with the ball and need to avoid the opponents by jumping. <br>
+                            Try to beat your high score!
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div>
+                                <a href="http://www.github.com/siaust/githubio" target="_blank">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        <i class="devicon-github-plain"></i>
+                                    </button>
+                                </a>
+
+                            </div>
+                            <div>
+                                <a href="soccer_game/index.html" target="_blank">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+
         </div>
 
-        
+
     </div>
 
     <div id="blog-container">

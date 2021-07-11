@@ -38,17 +38,7 @@ const activeSlide = "card-article activeSlide";
 const nextSlide = "card-article nextSlide";
 const nextSlideOffset = "card-article nextSlide offset";
 
-/* find the current active article index */
-// let currentActiveIndex = -1;
-
-// articlesArr.forEach((article, index) => {
-//     if (article.className.includes("activeSlide")) {
-//         console.log(index);
-//         currentActiveIndex = index;
-//     }
-// });
-
-// console.log(`current index ${currentActiveIndex}`);
+/* Set prev, next slide according to middle of array */
 const middle = Math.floor(articlesArr.length / 2);
 /* reassign the articles positions by css class depending on if left/right chevron clicked */
 const slider = (isForward) => {
@@ -172,3 +162,46 @@ request.onload = function () {
     }
 };
 request.send();
+
+/* Add interactivity to hero-svg. On mouseover, stroke will reverse. 
+On mouseleave stroke will complete from point stroke offset reversed to. */
+
+/* get root variables to find lengths */
+const root = document.querySelector(":root");
+let rootStyle = getComputedStyle(root);
+
+let path1Offset = rootStyle.getPropertyValue("--path-1-length");
+let pathOffset = rootStyle.getPropertyValue("--dynamic-offset");
+
+/* change to getchildren #hero-svg */
+const path1 = document.getElementById("path1");
+let pathStyle = getComputedStyle(path1);
+
+let currentStrokeLen = pathStyle.strokeDashoffset;
+console.log(`currentStrokeLen ${currentStrokeLen}`);
+
+path1.addEventListener("mouseover", () => {
+    console.log("mouse over path1");
+
+    /* set pathoffset */
+    currentStrokeLen = getComputedStyle(path1).strokeDashoffset;
+    console.log(`currentStrokeLen ${currentStrokeLen}`);
+    path1.style.setProperty("--dynamic-offset", currentStrokeLen);
+
+    console.log(getComputedStyle(root).getPropertyValue("--dynamic-stroke"));
+
+    /* change animation to revervse */
+    path1.style.animation = "stroke-reverse 3s forwards";
+});
+
+path1.addEventListener("mouseout", () => {
+    console.log("mouse out path1");
+
+    currentStrokeLen = getComputedStyle(path1).strokeDashoffset;
+    console.log(`currentStrokeLen ${currentStrokeLen}`);
+    path1.style.setProperty("--dynamic-offset", currentStrokeLen);
+
+    path1.style.animation = "stroke-fill 3s forwards";
+    currentStrokeLen = getComputedStyle(path1).strokeDashoffset;
+    console.log(`currentStrokeLen ${currentStrokeLen}`);
+});

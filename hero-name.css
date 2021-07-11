@@ -32,6 +32,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-1-length);
     stroke-dashoffset: var(--path-1-length);
+    --dynamic-offset: var(--path-1-length);
     animation: stroke-fill 3s ease 1 forwards 3s;
 }
 
@@ -41,6 +42,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-2-length);
     stroke-dashoffset: var(--path-2-length);
+    --dynamic-offset: var(--path-2-length);
     animation: stroke-fill 3s ease 1 forwards 3.3s;
 }
 
@@ -50,6 +52,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-3-length);
     stroke-dashoffset: var(--path-3-length);
+    --dynamic-offset: var(--path-3-length);
     animation: stroke-fill 3s ease 1 forwards 3.6s;
 }
 
@@ -59,6 +62,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-4-length);
     stroke-dashoffset: var(--path-4-length);
+    --dynamic-offset: var(--path-4-length);
     animation: stroke-fill 3s ease 1 forwards 3.9s;
 }
 
@@ -68,6 +72,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-5-length);
     stroke-dashoffset: var(--path-5-length);
+    --dynamic-offset: var(--path-5-length);
     animation: stroke-fill 3s ease 1 forwards 4.2s;
 }
 
@@ -77,6 +82,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-6-length);
     stroke-dashoffset: var(--path-6-length);
+    --dynamic-offset: var(--path-6-length);
     animation: stroke-fill 3s ease 1 forwards 4.5s;
 }
 
@@ -86,6 +92,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-7-length);
     stroke-dashoffset: var(--path-7-length);
+    --dynamic-offset: var(--path-7-length);
     animation: stroke-fill 3s ease 1 forwards 4.8s;
 }
 
@@ -95,6 +102,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-8-length);
     stroke-dashoffset: var(--path-8-length);
+    --dynamic-offset: var(--path-8-length);
     animation: stroke-fill 3s ease 1 forwards 5.1s;
 }
 
@@ -104,6 +112,7 @@
     stroke: #a89e5f;
     stroke-dasharray: var(--path-9-length);
     stroke-dashoffset: var(--path-9-length);
+    --dynamic-offset: var(--path-9-length);
     animation: stroke-fill 3s ease 1 forwards 5.4s;
 }
 

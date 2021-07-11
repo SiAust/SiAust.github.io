@@ -38,21 +38,26 @@ const activeSlide = "card-article activeSlide";
 const nextSlide = "card-article nextSlide";
 const nextSlideOffset = "card-article nextSlide offset";
 
+/* find the current active article index */
+// let currentActiveIndex = -1;
+
+// articlesArr.forEach((article, index) => {
+//     if (article.className.includes("activeSlide")) {
+//         console.log(index);
+//         currentActiveIndex = index;
+//     }
+// });
+
+// console.log(`current index ${currentActiveIndex}`);
+const middle = Math.floor(articlesArr.length / 2);
+/* reassign the articles positions by css class depending on if left/right chevron clicked */
 const slider = (isForward) => {
     console.log(isForward);
     console.log({ ...articlesArr });
 
-    /* find the current acive article index */
-    let currentActiveIndex = -1;
-    articlesArr.forEach((article, index) => {
-        if (article.className.includes("activeSlide")) {
-            currentActiveIndex = index;
-            return;
-        }
-    });
-    console.log({ currentActiveIndex });
-
-    /* reassign the articles positions by css class depending on if left/right chevron clicked */
+    /* Remove click event listeners */
+    articlesArr[middle - 1].removeEventListener("click", sliderLeftWrapper);
+    articlesArr[middle + 1].removeEventListener("click", sliderRightWrapper);
 
     /* move the last item to the front, or vice-versa */
     if (isForward) {
@@ -68,7 +73,7 @@ const slider = (isForward) => {
     }
 
     /* assign class names */
-    const middle = Math.floor(articlesArr.length / 2);
+
     articlesArr.map((article, index) => {
         if (index < middle - 1) {
             //   article.classList.remove("prevSlide offset");
@@ -77,12 +82,14 @@ const slider = (isForward) => {
         }
         if (index == middle - 1) {
             article.className = prevSlide;
+            article.addEventListener("click", sliderLeftWrapper);
         }
         if (index == middle) {
             article.className = activeSlide;
         }
         if (index == middle + 1) {
             article.className = nextSlide;
+            article.addEventListener("click", sliderRightWrapper);
         }
         if (index > middle + 1) {
             article.className = nextSlideOffset;
@@ -92,6 +99,20 @@ const slider = (isForward) => {
     console.log({ middle });
     console.log({ articlesArr });
 };
+
+/* Wrapping the function as removing anonymous functions with params
+from event listeners is difficult. Passing a reference name is better. */
+function sliderLeftWrapper() {
+    slider(false);
+}
+
+function sliderRightWrapper() {
+    slider(true);
+}
+
+/* Set up initial click listeners */
+articlesArr[middle - 1].addEventListener("click", sliderLeftWrapper);
+articlesArr[middle + 1].addEventListener("click", sliderRightWrapper);
 
 /* Populationg the blog div, pulling articles from Dev.to */
 const BLOG_DIV = document.getElementById("blog-container");

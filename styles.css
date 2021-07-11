@@ -454,7 +454,7 @@ by translatingX from the center point. Keeps a symetric look */
     transform: translate(-150%, -50%) scale(60%);
     left: 50%;
     opacity: 0;
-    /* display: none;  */
+    z-index: -1; /* overlaps prevSlide otherwise */
 }
 
 .card-article.activeSlide {

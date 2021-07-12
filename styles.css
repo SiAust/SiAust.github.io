@@ -517,6 +517,16 @@ by translatingX from the center point. Keeps a symetric look */
     color: var(--clr-highlight-1);
 }
 
+.slider-btn-glow {
+    animation: glow 1s ease 1 forwards;
+}
+
+@keyframes glow {
+    50% {
+        color: var(--clr-highlight-1);
+    }
+}
+
 /* end card slider */
 
 /* ========= */

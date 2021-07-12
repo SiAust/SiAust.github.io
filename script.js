@@ -38,6 +38,9 @@ const activeSlide = "card-article activeSlide";
 const nextSlide = "card-article nextSlide";
 const nextSlideOffset = "card-article nextSlide offset";
 
+const leftSlideBtn = document.getElementById("leftSlideBtn");
+const rightSlideBtn = document.getElementById("rightSlideBtn");
+
 /* Set prev, next slide according to middle of array */
 const middle = Math.floor(articlesArr.length / 2);
 /* reassign the articles positions by css class depending on if left/right chevron clicked */
@@ -46,8 +49,8 @@ const slider = (isForward) => {
     console.log({ ...articlesArr });
 
     /* Remove click event listeners */
-    articlesArr[middle - 1].removeEventListener("click", sliderLeftWrapper);
-    articlesArr[middle + 1].removeEventListener("click", sliderRightWrapper);
+    articlesArr[middle - 1].removeEventListener("click", sliderRightWrapper);
+    articlesArr[middle + 1].removeEventListener("click", sliderLeftWrapper);
 
     /* move the last item to the front, or vice-versa */
     if (isForward) {
@@ -55,11 +58,13 @@ const slider = (isForward) => {
         const lastElement = articlesArr.pop();
         articlesArr.unshift(lastElement);
         // console.log({ articlesArr });
+        rightSlideBtn.classList.add("slider-btn-glow");
     } else {
         // console.log({ articlesArr });
         const firstElement = articlesArr.shift();
         articlesArr.push(firstElement);
         // console.log({ articlesArr });
+        leftSlideBtn.classList.add("slider-btn-glow");
     }
 
     /* assign class names */
@@ -72,22 +77,27 @@ const slider = (isForward) => {
         }
         if (index == middle - 1) {
             article.className = prevSlide;
-            article.addEventListener("click", sliderLeftWrapper);
+            article.addEventListener("click", sliderRightWrapper);
         }
         if (index == middle) {
             article.className = activeSlide;
         }
         if (index == middle + 1) {
             article.className = nextSlide;
-            article.addEventListener("click", sliderRightWrapper);
+            article.addEventListener("click", sliderLeftWrapper);
         }
         if (index > middle + 1) {
             article.className = nextSlideOffset;
         }
     });
 
-    console.log({ middle });
-    console.log({ articlesArr });
+    // console.log({ middle });
+    // console.log({ articlesArr });
+    /* Remove the animation class from button so it will play when added on next click event */
+    let btn = isForward ? rightSlideBtn : leftSlideBtn;
+    setTimeout(() => {
+        btn.classList.remove("slider-btn-glow");
+    }, 1000);
 };
 
 /* Wrapping the function as removing anonymous functions with params
@@ -101,8 +111,8 @@ function sliderRightWrapper() {
 }
 
 /* Set up initial click listeners */
-articlesArr[middle - 1].addEventListener("click", sliderLeftWrapper);
-articlesArr[middle + 1].addEventListener("click", sliderRightWrapper);
+articlesArr[middle - 1].addEventListener("click", sliderRightWrapper);
+articlesArr[middle + 1].addEventListener("click", sliderLeftWrapper);
 
 /* Populationg the blog div, pulling articles from Dev.to */
 const BLOG_DIV = document.getElementById("blog-container");

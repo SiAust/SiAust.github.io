@@ -9,7 +9,7 @@
     --path-8-length: 363.66119384765625;
     --path-9-length: 308.0753479003906;
 
-    --dynamic-offset: 100%;
+    --dynamic-offset: 0;
 }
 
 .hero-name {

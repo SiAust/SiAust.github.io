@@ -43,6 +43,19 @@ body {
 jbn mkdffgcvcxhjbnmjhbndfgtyuijkhgyuf jknb footer {
     margin-bottom: 2rem;
 }
+
+video {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 4px 4px 0 0;
+}
+
+/* ===== */
+/* class */
+/* ===== */
+
 .container {
     width: 80%;
     max-width: 1000px;
@@ -115,7 +128,7 @@ jbn mkdffgcvcxhjbnmjhbndfgtyuijkhgyuf jknb footer {
     box-shadow: 2px 2px 5px #333;
     height: auto;
     width: 16rem;
-    transition: width 2s;
+    /* transition: width 2s; */
 }
 
 #header-text {
@@ -158,6 +171,16 @@ ul {
 li {
     float: right;
     color: white;
+}
+
+/* remove anchors to improve seo */
+.dropdown-content p {
+    color: white;
+    padding: 0.5rem;
+}
+
+.dropdown-content p:hover {
+    cursor: pointer;
 }
 
 li a, .dropBtn/*,  #webDropBtn,
@@ -312,7 +335,7 @@ li a.active {
     width: 100%;
     height: 18rem;
     overflow: hidden;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .img-container h4 {
@@ -321,10 +344,20 @@ li a.active {
     z-index: 1;
 }
 
+.img-container svg {
+    height: 100%;
+    width: 100%;
+}
+
 .card-img-grad {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* extend w/h otherwise flickering occurs 
+    near edges during card slide transition */
+    width: 102%;
+    height: 102%;
     background: linear-gradient(130deg, var(--clr-project-3), var(--clr-alpha));
 }
 
@@ -477,6 +510,7 @@ by translatingX from the center point. Keeps a symetric look */
     transform: translate(50%, -50%) scale(60%);
     left: 50%;
     opacity: 0;
+    z-index: -1;
     /* display: none; */
 }
 
@@ -744,3 +778,34 @@ ul i:hover {
 @media screen and (max-width: 768px) {
     /* TODO add media queries */
 }
+
+/* Pet card media grid */
+.pet-grid {
+    display: grid;
+    grid-template-areas:
+        "img1 img2 video"
+        "img3 img3 video";
+    grid-template-columns: 1fr 1fr 136px;
+    grid-template-rows: 144px 144px;
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    grid-area: video;
+}
+
+#img1 {
+    grid-area: img1;
+    border-radius: 4px 0 0 0;
+}
+
+#img2 {
+    grid-area: img2;
+}
+
+#img3 {
+    grid-area: img3;
+}
+
+/* end pet card media grid */

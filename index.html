@@ -61,9 +61,15 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+            crossorigin="anonymous"
+        />
         <!-- fonts -->
         <link
-            href="https://fonts.googleapis.com/css?family=Lobster+Two"
+            href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap"
             rel="stylesheet"
             type="text/css"
             ;
@@ -72,13 +78,6 @@
             href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@531&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-            crossorigin="anonymous"
-        />
-
         <!-- Misc -->
         <link rel="icon" color="blue" />
     </head>
@@ -155,6 +154,7 @@
                             class="profile-pic"
                             src="resources/profile-256.png"
                             alt="Simon Aust"
+                            style="width: 255; height: 255"
                         />
 
                         <!-- Typed.js creates a typing effect for a array of words -->
@@ -196,7 +196,7 @@
                     <div class="dropdown-content">
                         <ul>
                             <li id="springDropBtn">
-                                <a href="javascript:void(0)">Spring</a>
+                                <p>Spring</p>
                                 <div class="subMenu">
                                     <a
                                         href="https://github.com/SiAust/Web-Quiz-App"
@@ -209,7 +209,7 @@
                         </ul>
                         <ul>
                             <li id="webDropBtn">
-                                <a href="javascript:void(0)">HTML, CSS & JS</a>
+                                <p>HTML, CSS & JS</p>
                                 <div class="subMenu">
                                     <a
                                         href="virtual_piano/virtual_piano.html"
@@ -228,7 +228,7 @@
                         </ul>
                         <ul>
                             <li id="javaDropBtn">
-                                <a href="javascript:void(0)">Java</a>
+                                <p>Java</p>
                                 <div class="subMenu">
                                     <a
                                         href="https://github.com/SiAust/Music-Advisor"
@@ -253,7 +253,7 @@
                         </ul>
                         <ul>
                             <li id="droidDropBtn">
-                                <a href="javascript:void(0)">Android</a>
+                                <p>Android</p>
                                 <div class="subMenu">
                                     <a
                                         href="https://github.com/SiAust/Pets_Database_App"
@@ -293,16 +293,36 @@
                             <div class="img-container">
                                 <h4>Pet Database</h4>
                                 <div class="card-img-grad"></div>
-                                <img
-                                    src="resources/pet_app.gif"
-                                    alt="Android application demo video"
-                                    height="255px"
-                                    width="113px"
-                                    style="
-                                        border-radius: 4px 4px 0px 0px;
-                                        margin: auto;
-                                    "
-                                />
+
+                                <div class="pet-grid">
+                                    <img
+                                        id="img1"
+                                        src="resources/pet-app-icons.png"
+                                        alt=""
+                                    />
+                                    <img
+                                        id="img2"
+                                        src="resources/pet-edit-menu.png"
+                                        alt=""
+                                    />
+                                    <img
+                                        id="img3"
+                                        src="resources/pet-main-menu.png"
+                                        alt=""
+                                    />
+                                    <video
+                                        id="video"
+                                        autoplay
+                                        loop
+                                        mute
+                                        style="object-fit: none"
+                                    >
+                                        <source
+                                            src="resources/petapp-webm-288h.webm"
+                                            alt="Android application demo video"
+                                        />
+                                    </video>
+                                </div>
                             </div>
 
                             <div class="card-body">
@@ -413,7 +433,7 @@
                                 <h4>Virtual Piano</h4>
                                 <div class="card-img-grad"></div>
                                 <img
-                                    src="resources/virtual_piano.jpg"
+                                    src="resources/virtual_piano.png"
                                     alt="screenshot of virtual piano"
                                 />
                                 <!-- height="255px" style="border-radius:4px 4px 0px 0px" -->
@@ -545,14 +565,14 @@
                             <div class="img-container">
                                 <h4>Text Editor</h4>
                                 <div class="card-img-grad"></div>
-
-                                <!-- stop calling github while testing
-                                <img
-                                    src="https://github.com/SiAust/Text-Editor/raw/master/example.gif"
-                                    height="255px"
-                                    style="border-radius: 4px 4px 0px 0px"
-                                    alt="text editor example gif"
-                                /> -->
+                                <video autoplay mute loop>
+                                    <source
+                                        src="resources/texteditor-webm.webm"
+                                        height="255px"
+                                        style="border-radius: 4px 4px 0px 0px"
+                                        alt="text editor example gif"
+                                    />
+                                </video>
                             </div>
 
                             <div class="card-body">
@@ -591,12 +611,14 @@
                             <div class="img-container">
                                 <h4>Music Advisor</h4>
                                 <div class="card-img-grad"></div>
-                                <img
-                                    src="resources/example.gif"
-                                    height="255px"
-                                    style="border-radius: 4px 4px 0px 0px"
-                                    alt="music advisor example gif"
-                                />
+                                <video loop autoplay mute>
+                                    <source
+                                        src="resources/musicadvisor-webm.webm"
+                                        height="255px"
+                                        style="border-radius: 4px 4px 0px 0px"
+                                        alt="music advisor example gif"
+                                    />
+                                </video>
                             </div>
 
                             <div class="card-body">
@@ -635,9 +657,7 @@
                                 <h4>Flappy Soccer!</h4>
                                 <div class="card-img-grad"></div>
                                 <img
-                                    src="resources/soccer_game.jpg"
-                                    height="255px"
-                                    style="border-radius: 4px 4px 0px 0px"
+                                    src="resources/soccer-resize.png"
                                     alt="soccer game screenshot"
                                 />
                             </div>

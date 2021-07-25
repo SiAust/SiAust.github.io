@@ -1,13 +1,132 @@
-let dropButton = document.querySelector(".dropdown");
-let dropBar = document.querySelector(".dropBar");
+/* Projects nav control */
+const expandProjectsMenu = document.querySelector(".expander");
+const expandIcon = expandProjectsMenu.children.item(0);
+const dropdownContent = document.querySelector(".dropdown-content");
 
-dropButton.onmouseover = function () {
-    dropBar.style.display = "block";
+/* handle the expansion of the project drop down */
+expandProjectsMenu.onclick = function () {
+    console.log("mouse click");
+    console.log({ expandIcon });
+    if (dropdownContent.classList.contains("visible")) {
+        dropdownContent.classList.remove("visible");
+    } else {
+        dropdownContent.classList.add("visible");
+    }
+
+    if (expandIcon.classList.contains("fa-compress")) {
+        expandIcon.classList.remove("fa-compress");
+        expandIcon.classList.add("fa-expand");
+    } else {
+        expandIcon.classList.remove("fa-expand");
+        expandIcon.classList.add("fa-compress");
+    }
 };
 
-dropButton.onmouseleave = function () {
-    dropBar.style.display = "none";
-};
+const dropBtnsCol = document.getElementsByClassName("dropItem");
+const dropBtnArr = [...dropBtnsCol];
+
+const logosCol = document.querySelector(".logo-container").children;
+const logosArr = [...logosCol];
+
+/* when hover state active, fa icons will change color */
+dropBtnArr.map((btn) => {
+    btn.addEventListener("mouseover", (e) => {
+        // console.log({ logosArr });
+        // console.log({ dropBtnArr });
+        if (e.type === "mouseover") {
+            // console.log(e.target);
+            // console.log(e.target.innerHTML);
+            // console.log(e.target.innerHTML.toLowerCase().substring(0, 3));
+            toggleLogos(
+                e.type,
+                e.target.innerHTML.toLowerCase().substring(0, 4)
+            );
+        }
+    });
+});
+
+dropBtnArr.map((btn) => {
+    btn.addEventListener("mouseleave", (e) => {
+        // console.log(e.target);
+        // console.log(e.target.firstChild);
+        // console.log(
+        //     e.target.firstChild.nextElementSibling.childNodes[0].textContent
+        //         .toLowerCase()
+        //         .substring(0, 3)
+        // );
+        toggleLogos(
+            e.type,
+            e.target.firstChild.nextElementSibling.childNodes[0].textContent
+                .toLowerCase()
+                .substring(0, 4)
+        );
+    });
+});
+
+function toggleLogos(eventType, logo) {
+    const [
+        reactLogo,
+        springLogo,
+        html5Logo,
+        css3Logo,
+        jsLogo,
+        javaLogo,
+        androidLogo,
+    ] = [...logosArr];
+
+    switch (logo) {
+        case "reac":
+            console.log("react button");
+
+            /* prevents error where use mouseover after 
+            pointing to submenu items, toggles class again */
+            if (checkMouseOverAndClasslistIncHover(eventType, reactLogo)) {
+                break;
+            }
+            reactLogo.classList.toggle("hover");
+            break;
+        case "spri":
+            // console.log("spring button");
+            if (checkMouseOverAndClasslistIncHover(eventType, springLogo)) {
+                break;
+            }
+            springLogo.classList.toggle("hover");
+            break;
+        case "html":
+            // console.log("html button");
+            if (checkMouseOverAndClasslistIncHover(eventType, html5Logo)) {
+                break;
+            }
+            html5Logo.classList.toggle("hover");
+            css3Logo.classList.toggle("hover");
+            jsLogo.classList.toggle("hover");
+            break;
+        case "java":
+            // console.log("java button");
+            if (checkMouseOverAndClasslistIncHover(eventType, javaLogo)) {
+                break;
+            }
+            javaLogo.classList.toggle("hover");
+            break;
+        case "andr":
+            // console.log("android button");
+            if (checkMouseOverAndClasslistIncHover(eventType, androidLogo)) {
+                break;
+            }
+            androidLogo.classList.toggle("hover");
+            break;
+
+        default:
+            break;
+    }
+
+    function checkMouseOverAndClasslistIncHover(eventType, element) {
+        if (eventType === "mouseover" && element.classList.contains("hover")) {
+            return true;
+        }
+        return false;
+    }
+}
 
 var typed = new Typed("#typed-code", {
     strings: [
@@ -45,8 +164,8 @@ const rightSlideBtn = document.getElementById("rightSlideBtn");
 const middle = Math.floor(articlesArr.length / 2);
 /* reassign the articles positions by css class depending on if left/right chevron clicked */
 const slider = (isForward) => {
-    console.log(isForward);
-    console.log({ ...articlesArr });
+    // console.log(isForward);
+    // console.log({ ...articlesArr });
 
     /* Remove click event listeners */
     articlesArr[middle - 1].removeEventListener("click", sliderRightWrapper);

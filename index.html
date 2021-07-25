@@ -193,9 +193,41 @@
                 <li><a href="#blog-container">Blog</a></li>
                 <li class="dropdown">
                     <a href="#card-container" class="dropBtn">Projects</a>
-                    <div class="dropdown-content">
+                    <div class="expander">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </li>
+                <li><a class="active" href="#home">Home</a></li>
+
+                <div class="dropdown-content">
+                    <!-- logos -->
+                    <div class="logo-container">
+                        <i class="devicon-react-original"></i>
+                        <i class="devicon-spring-plain"></i>
+                        <i class="devicon-html5-plain"></i>
+                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-java-plain"></i>
+                        <i class="devicon-android-plain"></i>
+                    </div>
+
+                    <!-- container for the sub menus -->
+                    <div class="sub-container">
                         <ul>
-                            <li id="springDropBtn">
+                            <li class="dropItem">
+                                <p>React</p>
+                                <div class="subMenu">
+                                    <a
+                                        href="https://simonaust.netlify.com"
+                                        target="_blank"
+                                        rel="noopener"
+                                        >Portfolio</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="dropItem">
                                 <p>Spring</p>
                                 <div class="subMenu">
                                     <a
@@ -204,11 +236,17 @@
                                         rel="noopener"
                                         >Web Quiz Engine</a
                                     >
+                                    <a
+                                        href="https://github.com/SiAust/code_sharing_platform"
+                                        target="_blank"
+                                        rel="noopener"
+                                        >Code Snippets</a
+                                    >
                                 </div>
                             </li>
                         </ul>
                         <ul>
-                            <li id="webDropBtn">
+                            <li class="dropItem">
                                 <p>HTML, CSS & JS</p>
                                 <div class="subMenu">
                                     <a
@@ -227,7 +265,7 @@
                             </li>
                         </ul>
                         <ul>
-                            <li id="javaDropBtn">
+                            <li class="dropItem">
                                 <p>Java</p>
                                 <div class="subMenu">
                                     <a
@@ -252,7 +290,7 @@
                             </li>
                         </ul>
                         <ul>
-                            <li id="droidDropBtn">
+                            <li class="dropItem">
                                 <p>Android</p>
                                 <div class="subMenu">
                                     <a
@@ -265,8 +303,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
-                <li><a class="active" href="#home">Home</a></li>
+                </div>
             </ul>
 
             <!-- Projects cards -->

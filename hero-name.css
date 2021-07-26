@@ -133,3 +133,13 @@
         stroke-dashoffset: 100%;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .hero-name {
+        position: relative;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+    }
+}

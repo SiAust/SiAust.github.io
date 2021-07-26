@@ -93,6 +93,7 @@ function toggleLogos(eventType, logo) {
             springLogo.classList.toggle("hover");
             break;
         case "html":
+        case "web":
             // console.log("html button");
             if (checkMouseOverAndClasslistIncHover(eventType, html5Logo)) {
                 break;

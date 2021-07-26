@@ -352,23 +352,9 @@ li.dropdown i {
     animation: fade-in 0.5s forwards;
 }
 
-/* #webDropBtn:hover .subMenu {
-    display: block;
-    animation: fade-in .5s forwards;
+#menutext-short {
+    display: none;
 }
-#droidDropBtn:hover .subMenu {
-    display: block;
-    animation: fade-in .5s forwards;
-}
-
-#javaDropBtn:hover .subMenu {
-    display: block;
-    animation: fade-in .5s forwards;
-}
-
-li a.active {
-    border-bottom: 2px solid #a89e5f;
-} */
 
 /* ==================== */
 /* Cards related styles */
@@ -745,8 +731,10 @@ by translatingX from the center point. Keeps a symetric look */
 }
 
 #contact p {
+    /* margin-left: 20px; */
     text-align: center;
     font-size: 1rem;
+    padding: 1rem;
 }
 
 .contact-form {
@@ -894,3 +882,156 @@ ul i:hover {
 }
 
 /* end pet card media grid */
+
+/* ============= */
+/* media queries */
+/* ============= */
+
+/* large phone */
+@media screen and (max-width: 425px) {
+    html,
+    body {
+        width: 100vw;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* profile section */
+
+    .header-container {
+        position: relative;
+
+        transform: none;
+
+        flex-direction: column;
+    }
+
+    .header-pic {
+        position: absolute;
+
+        height: 100%;
+    }
+
+    /* top nav */
+
+    .logo-container i {
+        font-size: 3rem;
+        margin: 0.2rem;
+    }
+
+    #menutext-long {
+        display: none;
+    }
+
+    #menutext-short {
+        display: block;
+    }
+
+    /* ============== */
+    /* project styles */
+    /* ============== */
+
+    .card-container {
+        overflow: hidden;
+    }
+
+    .card-container h3 {
+        margin: 2rem 0 0 0;
+    }
+
+    .card-article {
+        width: 100vw;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* slides */
+
+    .slider-btns {
+        margin: 0;
+    }
+
+    .card-article.prevSlide {
+        transform: translate(-150%, -50%);
+        left: -50%;
+    }
+
+    .card-article.nextSlide {
+        transform: translate(0%, -50%);
+        left: 120%;
+    }
+
+    /* =========== */
+    /* blog styles */
+    /* =========== */
+
+    #blog-container a {
+        width: 90%;
+    }
+
+    .blog-card-img {
+        height: 10rem;
+    }
+
+    .blog-tags {
+        left: 50%;
+        right: unset;
+
+        transform: translateX(-50%);
+    }
+
+    .tag {
+        margin: 0 0.4rem;
+    }
+
+    /* contact styles */
+
+    .contact-form {
+        width: 75%;
+    }
+
+    .form-item {
+        flex-direction: column;
+    }
+
+    /* footer */
+
+    #bottom-nav {
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+/* small phone */
+@media screen and (max-width: 320px) {
+    /* nav */
+
+    li a,
+    .dropBtn {
+        font-size: 13px;
+    }
+
+    .logo-container i {
+        font-size: 2rem;
+    }
+
+    /* =========== */
+    /* blog styles */
+    /* =========== */
+
+    .tag {
+        font-size: 0.8rem;
+    }
+
+    /* ======= */
+    /* contact */
+    /* ======= */
+
+    .contact-form {
+        width: 100%;
+    }
+}

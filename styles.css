@@ -155,6 +155,123 @@ video {
     padding: 1rem;
 }
 
+/* code intro */
+.code-container {
+    position: relative;
+
+    width: 35rem;
+    height: 30rem;
+
+    margin: 1rem;
+
+    border: 2px solid black;
+    border-radius: 0.2rem;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    cursor: grab;
+}
+
+.window-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    height: 2rem;
+    width: 100%;
+
+    background-color: #000;
+
+    z-index: 1;
+}
+
+.window-titlebar .info {
+    display: flex;
+    align-items: center;
+}
+
+.window-titlebar .tabs button {
+    outline: none;
+
+    border-top: 2px gray solid;
+    border-left: 2px gray solid;
+    border-right: 2px gray solid;
+    border-bottom: unset;
+
+    border-radius: 0.2rem 0.2rem 0 0;
+
+    margin-right: 0.2rem;
+
+    background-color: #333;
+
+    color: white;
+}
+
+.window-titlebar .tabs button.active {
+    background-color: black;
+}
+
+/* .window-titlebar .tabs button:active {
+    border: none;
+} */
+
+.window-titlebar .title-btn {
+    height: 0.8rem;
+    width: 0.8rem;
+
+    margin: 0.5rem;
+
+    border-radius: 50%;
+}
+
+.window-titlebar p {
+    color: white;
+    font-family: monospace;
+}
+
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+
+pre {
+    position: absolute;
+    top: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    /* z-index: -1; */
+}
+
+.snippet.visible {
+    display: unset;
+}
+
+code {
+    height: 100%;
+    width: 100%;
+
+    padding: unset;
+    padding-top: 2rem;
+
+    position: absolute;
+    top: 0;
+
+    background: rgba(0, 0, 0, 0) !important;
+}
+
 /* Navigation and dropdown menu styles */
 
 ul {
@@ -848,10 +965,6 @@ ul i:hover {
     overflow: auto;
 }
 
-@media screen and (max-width: 768px) {
-    /* TODO add media queries */
-}
-
 /* Pet card media grid */
 .pet-grid {
     display: grid;
@@ -887,6 +1000,10 @@ ul i:hover {
 /* media queries */
 /* ============= */
 
+@media screen and (max-width: 768px) {
+    /* TODO add media queries */
+}
+
 /* large phone */
 @media screen and (max-width: 425px) {
     html,
@@ -912,6 +1029,23 @@ ul i:hover {
         position: absolute;
 
         height: 100%;
+    }
+
+    .profile-pic {
+        width: 12rem;
+    }
+
+    .code-container {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .window-titlebar .tabs button {
+        width: 3rem;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     /* top nav */
@@ -1006,8 +1140,21 @@ ul i:hover {
     }
 }
 
+/* medium phone */
+@media screen and (max-width: 375px) {
+    /* profile */
+    .window-titlebar .tabs button {
+        width: 2rem;
+    }
+}
+
 /* small phone */
 @media screen and (max-width: 320px) {
+    /* profile */
+    .window-titlebar .tabs button {
+        width: 1rem;
+    }
+
     /* nav */
 
     li a,

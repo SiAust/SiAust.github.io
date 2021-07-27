@@ -41,6 +41,7 @@
         <meta name="twitter:domain" content="http://www.simonaust.co.uk/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:alt" content="Simon Aust portfolio card" />
+        <!-- end meta tags for social media -->
 
         <!-- Bootstrap CSS -->
         <link
@@ -67,6 +68,12 @@
             integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
             crossorigin="anonymous"
         />
+        <!-- code highlight.js -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
         <!-- fonts -->
         <link
             href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap"
@@ -163,7 +170,109 @@
                         </div>
                     </div>
 
-                    <p id="header-text">
+                    <div class="code-container">
+                        <div class="window-titlebar">
+                            <div class="info">
+                                <div class="title-btn red"></div>
+                                <div class="title-btn yellow"></div>
+                                <div class="title-btn green"></div>
+                                <p>C:\Users\si_au\</p>
+                            </div>
+                            <div class="tabs">
+                                <button onclick="showSnippet(0)" class="active">
+                                    index.js
+                                </button>
+                                <button onclick="showSnippet(1)">
+                                    Main.java
+                                </button>
+                                <button onclick="showSnippet(2)">
+                                    intro.md
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- code snippets -->
+
+                        <!-- javascript -->
+                        <pre class="snippet visible">
+                            <code class="language-js">
+const simonAust = {
+    location: {
+        country: "UK",
+        region: "south",
+        town: "Bournemouth"
+    },
+    skills: [
+        languages: [
+            "Java",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "Python",
+            "SQL"
+        ],
+        frameworks: [
+            "Springboot",
+            "React",
+            "Thymeleaf"
+        ]
+        tools: [
+            "Postman",
+            "Git",
+            "Github"
+        ]
+    ],
+    education: "Open University",
+    personal: [
+        hobbies: [
+            "photography",
+            "environment"
+        ]
+    ]
+}
+                            </code>
+                        </pre>
+
+                        <!-- java -->
+                        <pre class="snippet">
+                            <code class="language-java">
+public class SimonAust {
+    private final String name = "Simon Aust";
+    private final String location = "Bournemouth"
+
+    public static void Main(String ...args) {
+
+    }
+}
+                            </code>
+                        </pre>
+
+                        <!-- text -->
+                        <pre class="snippet">
+                            <code class="language-java">
+/*
+Hi, I'm a software developer from Bournemouth the area.
+I am skilled with a few languages and love to learn 
+and push my knowledge everyday.
+I like to be creative and pride myself in making
+solutions to problems.
+Please see my projects below for a showcase of what
+I can bring to your team.
+Thanks for looking!
+*/
+                            </code>
+                        </pre>
+                    </div>
+
+                    <!-- <p id="header-text">
+                        location
+                        education
+                        languages
+                        frameworks
+                        tools
+                        hobbies
+                        interests
+
                         Software developer based near Bournemouth on the
                         beautiful south coast of England. <br /><br />
                         I have experience developing back end apps with
@@ -182,7 +291,7 @@
                         the forest. I volunteer with some local environment
                         groups to improve recycling options and raise awareness
                         of climate issues.<br /><br />
-                    </p>
+                    </p> -->
                 </div>
             </div>
 
@@ -929,6 +1038,10 @@
         </div>
 
         <script src="script.js"></script>
+        <!-- highlight.js -->
+        <script>
+            hljs.highlightAll();
+        </script>
         <!-- JavaScript for Bootstrap -->
         <script
             src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

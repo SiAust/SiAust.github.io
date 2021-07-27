@@ -1,3 +1,22 @@
+/* logic to swap tabs in code window */
+const snippets = [...document.getElementsByClassName("snippet")];
+const tabBtns = [...document.querySelectorAll(".tabs button")];
+
+function showSnippet(id) {
+    // console.log(id);
+    // console.log({ tabBtns });
+
+    tabBtns
+        .filter((tab) => tab.classList.contains("active"))[0]
+        .classList.remove("active");
+    tabBtns[id].classList.add("active");
+
+    snippets
+        .filter((snip) => snip.classList.contains("visible"))[0]
+        .classList.remove("visible");
+    snippets[id].classList.add("visible");
+}
+
 /* Projects nav control */
 const expandProjectsMenu = document.querySelector(".expander");
 const expandIcon = expandProjectsMenu.children.item(0);
@@ -302,7 +321,7 @@ const pathsArr = [...paths];
 
 pathsArr.map((path, index) => {
     path.addEventListener("mouseover", () => {
-        console.log("mouse over path");
+        // console.log("mouse over path");
 
         /* get current value of strokeDashOffset */
         currentStrokeLen = getComputedStyle(path).strokeDashoffset;
@@ -313,15 +332,15 @@ pathsArr.map((path, index) => {
     });
 
     path.addEventListener("mouseout", () => {
-        console.log("mouse out path");
+        // console.log("mouse out path");
 
         /* Allow 3s for reverse animation to complete before setting fill anim */
         setTimeout(() => {
             currentStrokeLen = getComputedStyle(path).strokeDashoffset;
-            console.log(`currentStrokeLen ${currentStrokeLen}`);
+            // console.log(`currentStrokeLen ${currentStrokeLen}`);
             path.style.setProperty("--dynamic-offset", currentStrokeLen);
             path.style.animation = "stroke-fill 3s forwards";
-            console.log("timed out");
+            // console.log("timed out");
         }, 3000);
     });
 });

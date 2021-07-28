@@ -207,6 +207,8 @@ video {
     background-color: #333;
 
     color: white;
+
+    font-family: monospace;
 }
 
 .window-titlebar .tabs button.active {
@@ -232,13 +234,13 @@ video {
 }
 
 .red {
-    background-color: red;
+    background-color: hsla(5, 97%, 66%, 1);
 }
 .yellow {
-    background-color: yellow;
+    background-color: hsla(42, 96%, 59%, 1);
 }
 .green {
-    background-color: green;
+    background-color: hsla(129, 66%, 47%, 1);
 }
 
 pre {
@@ -260,11 +262,15 @@ pre {
 }
 
 code {
-    height: 100%;
+    /* allow the code element to remain
+    within pre element with top margin.
+    This mean the vertical scrollbar
+    will not hide under the title bar */
+    height: calc(100% - 2rem);
     width: 100%;
 
-    padding: unset;
-    padding-top: 2rem;
+    padding-top: 0 !important;
+    margin-top: 2rem;
 
     position: absolute;
     top: 0;

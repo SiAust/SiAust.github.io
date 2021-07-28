@@ -195,8 +195,7 @@
 
                         <!-- javascript -->
                         <pre class="snippet visible">
-                            <code class="language-js">
-const simonAust = {
+                            <code class="language-js">const simonAust = {
     location: {
         country: "UK",
         region: "south",
@@ -236,13 +235,20 @@ const simonAust = {
                         <!-- java -->
                         <pre class="snippet">
                             <code class="language-java">
-public class SimonAust {
-    private final String name = "Simon Aust";
-    private final String location = "Bournemouth"
+public class SimonAust implements Person {
 
-    public static void Main(String ...args) {
+    private final String firstName = "Simon";
+    private final String lastName = "Aust"; 
+    private final String location = "Bournemouth";
 
-    }
+    @Override
+    public String getFullName() { return String.format("%s %s", firstName, lastName); }
+
+    @Override
+    public String getSkills() {}
+
+    @Override
+    public String getSkills() {}
 }
                             </code>
                         </pre>

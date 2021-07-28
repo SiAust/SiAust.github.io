@@ -310,7 +310,7 @@ request.onload = function () {
         BLOG_DIV.appendChild(linkWrapper);
     }
 };
-// request.send();
+request.send();
 
 /* Add interactivity to hero-svg. On mouseover, stroke will reverse. 
 On mouseleave stroke will complete from point stroke offset reversed to. */

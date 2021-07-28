@@ -180,13 +180,16 @@
                             </div>
                             <div class="tabs">
                                 <button onclick="showSnippet(0)" class="active">
-                                    index.js
+                                    <div class="round-corners"></div>
+                                    <span>index.js</span>
                                 </button>
                                 <button onclick="showSnippet(1)">
-                                    Main.java
+                                    <div class="round-corners"></div>
+                                    <span>Main.java</span>
                                 </button>
                                 <button onclick="showSnippet(2)">
-                                    intro.md
+                                    <div class="round-corners"></div>
+                                    <span>intro.md</span>
                                 </button>
                             </div>
                         </div>
@@ -198,10 +201,10 @@
                             <code class="language-js">const simonAust = {
     location: {
         country: "UK",
-        region: "south",
+        region: "south central",
         town: "Bournemouth"
     },
-    skills: [
+    skills: {
         languages: [
             "Java",
             "HTML",
@@ -220,52 +223,67 @@
             "Git",
             "Github"
         ]
-    ],
+    },
     education: "Open University",
-    personal: [
+    personal: {
         hobbies: [
             "photography",
-            "environment"
+            "environment",
+            "tech"
         ]
-    ]
+    }
 }
                             </code>
                         </pre>
 
                         <!-- java -->
                         <pre class="snippet">
-                            <code class="language-java">
-public class SimonAust implements Person {
+                            <code class="language-java">public class SimonAust implements Person {
 
     private final String firstName = "Simon";
     private final String lastName = "Aust"; 
     private final String location = "Bournemouth";
+    private final List<String> skills = List.of(
+        "java", "javascript", "html", "css", "google"
+    );
 
     @Override
-    public String getFullName() { return String.format("%s %s", firstName, lastName); }
+    public String getFullName() { 
+        return String.format("%s %s", firstName, lastName); 
+    }
 
     @Override
-    public String getSkills() {}
+    public String getLocation() {
+        return location;
+    }
 
     @Override
-    public String getSkills() {}
+    public List<String> getSkills() {
+        return skills;
+    }
 }
                             </code>
                         </pre>
 
                         <!-- text -->
                         <pre class="snippet">
-                            <code class="language-java">
-/*
-Hi, I'm a software developer from Bournemouth the area.
+                            <code class="language-markdown">
+### Hi, I'm Si.
+I'm a software developer from Bournemouth the area.
 I am skilled with a few languages and love to learn 
-and push my knowledge everyday.
+and push my knowledge everyday. Things like;
+- Java
+- JavaScript
+- HTML, CSS
+- Springboot and React
+
 I like to be creative and pride myself in making
 solutions to problems.
+
 Please see my projects below for a showcase of what
 I can bring to your team.
+
 Thanks for looking!
-*/
                             </code>
                         </pre>
                     </div>

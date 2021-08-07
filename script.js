@@ -254,8 +254,8 @@ articlesArr[middle - 1].addEventListener("click", sliderRightWrapper);
 articlesArr[middle + 1].addEventListener("click", sliderLeftWrapper);
 
 /* Populationg the blog div, pulling articles from Dev.to */
-const BLOG_DIV = document.getElementById("blog-container");
-
+const BLOG_DIV = document.getElementsByClassName("blog-items")[0];
+console.log({ BLOG_DIV });
 let request = new XMLHttpRequest();
 request.open("GET", "https://dev.to/api/articles?username=siaust");
 request.onload = function () {
@@ -310,7 +310,7 @@ request.onload = function () {
         BLOG_DIV.appendChild(linkWrapper);
     }
 };
-// request.send();
+request.send();
 
 /* Add interactivity to hero-svg. On mouseover, stroke will reverse. 
 On mouseleave stroke will complete from point stroke offset reversed to. */

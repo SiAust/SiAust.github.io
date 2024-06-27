@@ -1,0 +1,145 @@
+:root {
+    --path-1-length: 511.1132;
+    --path-2-length: 229.36099243164062;
+    --path-3-length: 632.4036865234375;
+    --path-4-length: 416.78350830078125;
+    --path-5-length: 407.93157958984375;
+    --path-6-length: 508.01275634765625;
+    --path-7-length: 384.58160400390625;
+    --path-8-length: 363.66119384765625;
+    --path-9-length: 308.0753479003906;
+
+    --dynamic-offset: 0;
+}
+
+.hero-name {
+    display: flex;
+
+    color: white;
+
+    width: 50%;
+    /* Centers to element 50% */
+    /* transform: translateX(-50%); */
+    position: absolute;
+    z-index: 1;
+    left: 18rem;
+    top: -5rem;
+}
+
+#hero-svg path:nth-child(1) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-1-length);
+    stroke-dashoffset: var(--path-1-length);
+    --dynamic-offset: var(--path-1-length);
+    animation: stroke-fill 3s ease 1 forwards 3s;
+}
+
+#hero-svg path:nth-child(2) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-2-length);
+    stroke-dashoffset: var(--path-2-length);
+    --dynamic-offset: var(--path-2-length);
+    animation: stroke-fill 3s ease 1 forwards 3.3s;
+}
+
+#hero-svg path:nth-child(3) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-3-length);
+    stroke-dashoffset: var(--path-3-length);
+    --dynamic-offset: var(--path-3-length);
+    animation: stroke-fill 3s ease 1 forwards 3.6s;
+}
+
+#hero-svg path:nth-child(4) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-4-length);
+    stroke-dashoffset: var(--path-4-length);
+    --dynamic-offset: var(--path-4-length);
+    animation: stroke-fill 3s ease 1 forwards 3.9s;
+}
+
+#hero-svg path:nth-child(5) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-5-length);
+    stroke-dashoffset: var(--path-5-length);
+    --dynamic-offset: var(--path-5-length);
+    animation: stroke-fill 3s ease 1 forwards 4.2s;
+}
+
+#hero-svg path:nth-child(6) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-6-length);
+    stroke-dashoffset: var(--path-6-length);
+    --dynamic-offset: var(--path-6-length);
+    animation: stroke-fill 3s ease 1 forwards 4.5s;
+}
+
+#hero-svg path:nth-child(7) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-7-length);
+    stroke-dashoffset: var(--path-7-length);
+    --dynamic-offset: var(--path-7-length);
+    animation: stroke-fill 3s ease 1 forwards 4.8s;
+}
+
+#hero-svg path:nth-child(8) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-8-length);
+    stroke-dashoffset: var(--path-8-length);
+    --dynamic-offset: var(--path-8-length);
+    animation: stroke-fill 3s ease 1 forwards 5.1s;
+}
+
+#hero-svg path:nth-child(9) {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #a89e5f;
+    stroke-dasharray: var(--path-9-length);
+    stroke-dashoffset: var(--path-9-length);
+    --dynamic-offset: var(--path-9-length);
+    animation: stroke-fill 3s ease 1 forwards 5.4s;
+}
+
+@keyframes stroke-fill {
+    from {
+        stroke-dashoffset: var(--dynamic-offset);
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes stroke-reverse {
+    from {
+        stroke-dashoffset: var(--dynamic-offset);
+    }
+    to {
+        stroke-dashoffset: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hero-name {
+        position: relative;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+    }
+}
